@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from "react";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import "./App.css";
+import history from "./history";
 
-function App() {
+const Header = lazy(() => import("./components/Header"));
+const Footer = lazy(() => import("./components/Footer"));
+const DashBoard = lazy(() => import("./components/DashBoard"));
+// const AddProduct = lazy(() => import("./components/AddProduct"));
+const Loader = () => <div className="spinner-border"></div>;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <div className="App">
+        <Suspense fallback={<Loader />}>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={DashBoard} />
+          </Switch>
+          <Footer />
+        </Suspense>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
