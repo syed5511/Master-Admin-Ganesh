@@ -40,10 +40,12 @@
 .navbar {
   left: 0;
   right: 0;
-  background-color: #eaebec;
+  background: #f3f3f3 0% 0% no-repeat padding-box;
+  border: 1px solid #bebebe;
+  opacity: 1;
   top: 0;
-  position: fixed;
   width: 100%;
+  height: 50px;
 }
 
 .footer {
@@ -51,21 +53,167 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 8%;
-  background-color: #eaebec;
+  height: 40px;
+  background: #f3f3f3 0% 0% no-repeat padding-box;
+  border: 1px solid #bebebe;
+  opacity: 1;
   text-align: center;
   color: black;
 }
 
 .label {
   float: left;
-}
-
-.addForm {
-  background-color: #eaebec;
-  /* margin-bottom: 10px; */
+  font: Bold 12px/15px Segoe UI;
+  letter-spacing: 0px;
+  color: #212f4d;
+  opacity: 1;
+  /* margin-left: 50px; */
 }
 
 .btn {
   box-shadow: 5px;
+}
+
+.select {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #306bf3;
+  border-radius: 4px;
+  opacity: 1;
+  width: 150px;
+  margin-left: 200px;
+  margin-bottom: 0px;
+}
+
+.addForm {
+  height: 734px;
+  background: #f3f3f3 0% 0% no-repeat padding-box;
+  border: 1px solid #bebebe;
+  opacity: 1;
+}
+
+.form-control {
+  width: 368px;
+  height: 46px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #f15151;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+.prdbtn {
+  width: 200px;
+  margin-top: 10px;
+}
+
+.table {
+  border: 1px solid #bebebe;
+  opacity: 1;
+}
+
+thead {
+  background: #f3f3f3 0% 0% no-repeat padding-box;
+}
+
+td {
+  font: Bold 13px/19px Segoe UI;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.form-check-input {
+  position: relative;
+  bottom: 2px;
+  left: 40px;
+  height: 25px;
+  width: 25px;
+  background-color: #bebebe;
+  border-radius: 50%;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.MuiTouchRipple-root {
+  color: white;
+}
+
+/* .MuiButtonBase-root {
+  background-color: darkblue;
+} */
+
+.form-check-label {
+  text-align: left;
+  letter-spacing: 0px;
+  color: #10182f;
+  opacity: 1;
+}
+
+.form-check {
+  margin-left: 10px;
+}
+
+.form-check-input {
+  color: #090c1c;
+}
+
+.success {
+  background: #e0f5d4 0% 0% no-repeat padding-box;
+  border: 2px solid #6fc73d;
+  border-radius: 5px;
+  opacity: 1;
+  width: 100%;
+}
+
+.alert-link {
+  font: Bold 13px/19px Segoe UI;
+}
+
+.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-page.MuiPaginationItem-outlined.MuiPaginationItem-rounded.Mui-selected {
+  background-color: #10182f;
+  color: white;
+}
+
+.css-12jo7m5 {
+  width: 50px;
+}
+
+.css-1rhbuit-multiValue:nth-child(2) {
+  background-color: #306bf3;
+}
+
+.css-1rhbuit-multiValue:nth-child(1) {
+  background-color: #4dd2ff;
+}
+
+.dash {
+  padding-right: 0px;
+}
+
+.prdtSucs {
+  width: 100%;
+  height: 30px;
+  background: #e0f5d4 0% 0% no-repeat padding-box;
+  border: 2px solid #6fc73d;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  opacity: 1;
 }
