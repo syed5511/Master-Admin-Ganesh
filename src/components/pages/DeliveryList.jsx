@@ -3,9 +3,9 @@ import SelectComponent from "../common/SelectComponent";
 import { useState } from "react";
 import SearchComponent from "../common/SearchComponent";
 import PaginationComponent from "./../common/Pagination";
-import ButtonComponent from "./../common/ButtonComponent";
+import ButtonComponent from "../common/ButtonComponent";
 
-const ProductList = () => {
+const DeliveryList = () => {
   const [options] = useState([
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
@@ -28,7 +28,7 @@ const ProductList = () => {
               </b>
             </label>
             <label className="label" style={{ color: "#090C1C" }}>
-              <b>Products</b>
+              <b>Delivery zip codes & Serving Kitchen</b>
             </label>
           </div>
         </div>
@@ -41,7 +41,7 @@ const ProductList = () => {
               options={options}
               onChange={handleChange}
               value={selectedOption}
-              Placeholder="Refine By Days"
+              Placeholder="Refine By State"
             />
           </div>
           <div className="form-group col-sm-2">
@@ -56,7 +56,7 @@ const ProductList = () => {
           <div className="form-group has-search col-sm-4 ml-5">
             <SearchComponent
               type="text"
-              placeholder="search item name"
+              placeholder="search by zip code"
               types="itemSrch"
             />
           </div>
@@ -65,7 +65,7 @@ const ProductList = () => {
               icon={
                 <i className="fa fa-plus form-control-feedback mr-4 fa-sm" />
               }
-              label="PRODUCT"
+              label="ZIP CODE"
               type="addZipBtn"
             />
           </div>
@@ -75,32 +75,28 @@ const ProductList = () => {
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">Item Name</th>
-              <th scope="col">Item Type</th>
-              <th scope="col">Kitchen Name</th>
-              <th scope="col">City</th>
+              <th scope="col">State</th>
               <th scope="col">Zip Code</th>
-              <th scope="col">Serving Days</th>
-              <th scope="col">Status</th>
+              <th scope="col">Kitchen</th>
+              <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td>Illinios</td>
+              <td>60077,78732,9090,22890</td>
+              <td>syed Kitchen, Varun Kitchen,asif Kitchen</td>
               <td>
-                <span>
-                  <i
-                    className="fa fa-circle form-control-feedback mr-3 fa-lg"
-                    style={{ color: "#BEBEBE" }}
-                  />
-                  Chicken Biriyani Chicken
-                </span>
+                <ButtonComponent type="deliveryActionBtn" label="Edit" />
               </td>
-              <td>Main Course</td>
-              <td>Syed Kitchen 5511</td>
-              <td>Chicago</td>
-              <td>60078</td>
-              <td>Mon,Tue,Wed,Thu,Fri,Sat,Sun</td>
-              <td style={{ color: "green" }}>Active</td>
+            </tr>
+            <tr>
+              <td>Illinios</td>
+              <td>60077,78732,9090,22890</td>
+              <td>syed Kitchen, Varun Kitchen,asif Kitchen</td>
+              <td>
+                <ButtonComponent type="deliveryActionBtn" label="Edit" />
+              </td>
             </tr>
           </tbody>
         </table>
@@ -110,4 +106,4 @@ const ProductList = () => {
   );
 };
 
-export default ProductList;
+export default DeliveryList;

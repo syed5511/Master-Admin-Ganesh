@@ -3,6 +3,7 @@ import { useState } from "react";
 import Select from "react-select";
 import SelectComponent from "../common/SelectComponent";
 import ButtonComponent from "../common/ButtonComponent";
+import SuccessAlert from "./../common/SuccessAlert";
 
 const AddProduct = () => {
   const [Countries] = useState([
@@ -29,6 +30,40 @@ const AddProduct = () => {
 
   return (
     <React.Fragment>
+      <div className="mt-5 pt-4">
+        <div className="form-row ml-5">
+          <div className="form-group col-xs-1">
+            <label className="label" style={{ color: "#306BF3" }}>
+              <b>
+                <i className="fa fa-home form-control-feedback mr-3 fa-lg" />
+              </b>
+            </label>
+            <label className="label" style={{ color: "#306BF3" }}>
+              <b>Products</b>
+            </label>
+          </div>
+          <div className="form-group col-xs-1">
+            <label className="label" style={{ color: "#306BF3" }}>
+              <b>
+                <i className="fa fa-chevron-right form-control-feedback mr-3 fa-sm" />
+              </b>
+            </label>
+            <label className="label">
+              <b>Add Product</b>
+            </label>
+          </div>
+          <div className="form-group col-md-6 ml-4">
+            <SuccessAlert label="Sucessfully Product Saved" type="prdSuc" />
+          </div>
+        </div>
+      </div>
+      <div>
+        <ButtonComponent
+          icon={<i className="fa fa-plus form-control-feedback mr-3 fa-sm" />}
+          label="PRODUCT"
+          type="prdbtn"
+        />
+      </div>
       <form
         className="pt-5 ml-5 col-sm-8 addForm"
         style={{
@@ -56,12 +91,6 @@ const AddProduct = () => {
               <b>Kitchen Name *</b>
             </label>
             <br />
-            {/* <select className="form-control ml-5">
-              <option>Select Kitchen</option>
-              <option>2</option>
-              <option>3</option>
-            </select> */}
-
             <SelectComponent
               type="selectKitchen"
               options={options}
@@ -75,11 +104,6 @@ const AddProduct = () => {
               <b>Item Type *</b>
             </label>
             <br />
-            {/* <select className="form-control ml-5">
-              <option>Select Type</option>
-              <option>2</option>
-              <option>3</option>
-            </select> */}
             <SelectComponent
               type="selectKitchen"
               options={options}
@@ -122,11 +146,6 @@ const AddProduct = () => {
                   <b>Serving Temperature</b>
                 </label>
                 <br />
-                {/* <select className="form-control">
-                  <option>Select Type</option>
-                  <option>2</option>
-                  <option>3</option>
-                </select> */}
                 <SelectComponent
                   type="selectType"
                   options={options}
@@ -217,11 +236,6 @@ const AddProduct = () => {
               <b>Chef Name </b>
             </label>
             <br />
-            {/* <select className="form-control ml-5">
-              <option>Select Chef Name</option>
-              <option>2</option>
-              <option>3</option>
-            </select> */}
             <SelectComponent
               type="selectKitchen"
               options={options}
@@ -237,9 +251,6 @@ const AddProduct = () => {
               <b>Cuisine Type </b>
             </label>
             <br />
-            {/* <select className="form-control ml-5">
-              <option>Select Cuisine Type</option>
-            </select> */}
             <SelectComponent
               type="selectKitchen"
               options={options}
@@ -253,11 +264,6 @@ const AddProduct = () => {
               <b>status </b>
             </label>
             <br />
-            {/* <select className="form-control ml-5">
-              <option>Select status</option>
-              <option>2</option>
-              <option>3</option>
-            </select> */}
             <SelectComponent
               type="selectKitchen"
               options={options}
