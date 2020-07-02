@@ -1,23 +1,19 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Alert,
-} from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import SuccessAlert from "./SuccessAlert";
+import ErrorAlert from "./ErrorAlert";
+import ButtonComponent from "./ButtonComponent";
 
 const ServingDaysPopup = ({ className }) => {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState(true);
 
   const toggle = () => setModal(!modal);
 
   return (
     <div>
-      <Button color="danger" onClick={toggle}>
+      {/* <Button color="danger" onClick={toggle}>
         click
-      </Button>
+      </Button> */}
       <Modal
         isOpen={modal}
         toggle={toggle}
@@ -29,11 +25,13 @@ const ServingDaysPopup = ({ className }) => {
         }}
       >
         <ModalHeader toggle={toggle} style={{ borderBottom: "0px" }}>
-          <Alert color="success" className="success px-5 py-0 ml-1">
-            <span className="alert-link">Successfully Saved</span>
-          </Alert>
+          <div>
+            <SuccessAlert label="saved successfully" />
+            <ErrorAlert label="failed" />
+          </div>
         </ModalHeader>
-        <ModalBody className="mt-0 py-0 ">
+
+        <ModalBody className="mt-0 py-0">
           <div className="row">
             <div className="col-md-8">
               <label
@@ -148,7 +146,7 @@ const ServingDaysPopup = ({ className }) => {
           </div>
         </ModalBody>
         <ModalFooter style={{ borderTop: "0px" }}>
-          <Button
+          {/* <Button
             color="light btn-sm"
             onClick={toggle}
             style={{
@@ -159,8 +157,13 @@ const ServingDaysPopup = ({ className }) => {
             }}
           >
             Cancel
-          </Button>{" "}
-          <Button
+          </Button>{" "} */}
+          <ButtonComponent
+            onClick={toggle}
+            label="Cancel"
+            type="servingDaysCancelBtn"
+          />
+          {/* <Button
             color="dark btn-sm"
             onClick={toggle}
             style={{
@@ -172,7 +175,8 @@ const ServingDaysPopup = ({ className }) => {
             }}
           >
             Save
-          </Button>
+          </Button> */}
+          <ButtonComponent label="Save" type="servingDaysBtn" />
         </ModalFooter>
       </Modal>
     </div>

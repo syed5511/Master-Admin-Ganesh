@@ -1,10 +1,6 @@
 import React from "react";
-
-//import ServingDaysPopup from "./ServingDaysPopup";
-import AddProduct from "./AddProduct";
-//import ProductList from "./ProductList";
-
-//import PaginationComponent from "./Pagination";
+import ButtonComponent from "./common/ButtonComponent";
+import ProductList from "./pages/ProductList";
 
 const DashBoard = () => {
   return (
@@ -18,25 +14,25 @@ const DashBoard = () => {
           </div>
           <div className="form-group col-xs-1">
             <label className="label" style={{ color: "#306BF3" }}>
-              <b> > </b>
+              <b>
+                <i className="fa fa-chevron-right form-control-feedback mr-3 fa-sm" />
+              </b>
             </label>
           </div>
-          <div className="form-group col-xs-3">
+          <div className="form-group col-sm-3">
             <label className="label">
               <b>Add Product</b>
             </label>
           </div>
         </div>
       </div>
-      <button
-        className="btn prdbtn btn-dark btn-md shadow-md mr-5"
-        style={{ float: "right" }}
-      >
-        + Products
-      </button>
-      {/* <ProductList /> */}
-      <AddProduct />
-      {/* <ServingDaysPopup /> */}
+
+      <ButtonComponent
+        icon={<i className="fa fa-plus form-control-feedback mr-3 fa-sm" />}
+        label=" PRODUCT"
+        type="prdbtn"
+      />
+      <ProductList />
     </div>
   );
 };

@@ -3,10 +3,9 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.css";
 import history from "./history";
 
-const Header = lazy(() => import("./components/Header"));
-const Footer = lazy(() => import("./components/Footer"));
+const Header = lazy(() => import("./components/common/Header"));
+const Footer = lazy(() => import("./components/common/Footer"));
 const DashBoard = lazy(() => import("./components/DashBoard"));
-// const AddProduct = lazy(() => import("./components/AddProduct"));
 const Loader = () => <div className="spinner-border"></div>;
 
 const App = () => {

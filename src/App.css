@@ -85,7 +85,7 @@
 }
 
 .addForm {
-  height: 734px;
+  height: 100%;
   background: #f3f3f3 0% 0% no-repeat padding-box;
   border: 1px solid #bebebe;
   opacity: 1;
@@ -100,10 +100,110 @@
   opacity: 1;
 }
 
-.prdbtn {
+.button.prdbtn {
   width: 200px;
+  height: 35px;
   margin-top: 10px;
+  margin-bottom: 5px;
+  float: right;
+  margin-right: 60px;
+  color: white;
+  background: #161a34 0% 0% no-repeat padding-box;
+  box-shadow: 10px 11px 16px #20275669;
+  border-radius: 5px;
+  opacity: 1;
 }
+
+.button.prdbtn1 {
+  width: 200px;
+  height: 35px;
+  float: right;
+  color: white;
+  background: #161a34 0% 0% no-repeat padding-box;
+  box-shadow: 10px 11px 16px #20275669;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.button.prdbtn2 {
+  width: 150px;
+  height: 35px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  opacity: 1;
+  margin-left: 10px;
+}
+
+.button.zipcodeBtn {
+  background: #f5be80 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #f5be80;
+  border-radius: 3px;
+  opacity: 1;
+  text-align: center;
+  font: Bold 14px/19px Roboto;
+  letter-spacing: 0px;
+  color: #172b4d;
+  width: 100%;
+  height: 35px;
+}
+
+.button.zipaddBtn {
+  background: #172b4d 0% 0% no-repeat padding-box;
+  border: 1px solid #172b4d;
+  border-radius: 3px;
+  text-align: center;
+  font: 12px/15px Segoe UI;
+  letter-spacing: 0px;
+  color: #f3eded;
+  float: right;
+  width: 40%;
+  height: 25px;
+}
+
+.button.servingDaysBtn {
+  width: 100px;
+  background: #161a34 0% 0% no-repeat padding-box;
+  box-shadow: 0px 11px 16px #20275669;
+  border-radius: 5px;
+  opacity: 1;
+  color: white;
+}
+
+.button.servingDaysCancelBtn {
+  width: 100px;
+  background: #e8eaf2 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+.Select.slct {
+  margin-left: 250px;
+  width: 60%;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.Select.SlctState {
+  width: 100%;
+}
+
+.Select.selectKitchen {
+  margin-left: 50px;
+  width: 100%;
+}
+
+/* .Select.refineKthnSlct {
+  width: 100%;
+} */
+
+/* .input.itemSrch {
+  background-color: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 4px;
+  opacity: 1;
+} */
 
 .table {
   border: 1px solid #bebebe;
@@ -154,11 +254,20 @@ td {
   background-color: darkblue;
 } */
 
-.form-check-label {
+/* .form-check-label {
   text-align: left;
   letter-spacing: 0px;
   color: #10182f;
   opacity: 1;
+  margin-bottom: 10px;
+} */
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .form-check {
@@ -175,6 +284,15 @@ td {
   border-radius: 5px;
   opacity: 1;
   width: 100%;
+  text-align: center;
+}
+
+.danger {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 2px solid #f37070;
+  border-radius: 5px;
+  opacity: 1;
+  text-align: center;
 }
 
 .alert-link {
@@ -211,9 +329,15 @@ td {
   opacity: 1;
 }
 
+.modal-content.modal-content {
+  background-color: #f4f5f7;
+  opacity: "1";
+}
+
 html,
 body {
   overflow-x: hidden;
+
   background: #ffffff 0% 0% no-repeat padding-box;
   opacity: 1;
 }
