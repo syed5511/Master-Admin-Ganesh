@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-const ButtonComponent = ({ handleClick, label, icon, type }) => {
+const ButtonComponent = ({ onClick, label, icon, type }) => {
   const [className] = useState(`button ${type}`);
   return (
     <div>
-      <button className={className} onClick={handleClick}>
+      <button className={className} onClick={onClick}>
         {icon && icon}
         {label}
       </button>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Select from "react-select";
 
-const SelectComponent = ({ type, options, handleChange, Placeholder }) => {
+const SelectComponent = ({ type, options, onChange, Placeholder }) => {
   const [className] = useState(`Select ${type}`);
 
   return (
@@ -9,7 +9,7 @@ const SelectComponent = ({ type, options, handleChange, Placeholder }) => {
       <Select
         className={className}
         // value={selectedOption}
-        onChange={handleChange}
+        onChange={onChange}
         options={options}
         placeholder={Placeholder}
       />

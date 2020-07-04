@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import {
+  // Button,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+} from "reactstrap";
+
 import SelectComponent from "./SelectComponent";
 import SuccessAlert from "./SuccessAlert";
 import ErrorAlert from "./ErrorAlert";
@@ -7,6 +14,8 @@ import ButtonComponent from "./ButtonComponent";
 
 const AddZipCode = ({ className }) => {
   const [modal, setModal] = useState(true);
+
+  const [fields, setFields] = useState([{ value: null }]);
 
   const [options] = useState([
     { value: "chocolate", label: "Chocolate" },
@@ -21,6 +30,25 @@ const AddZipCode = ({ className }) => {
   };
 
   const toggle = () => setModal(!modal);
+
+  const handleAdd = () => {
+    const values = [...fields];
+    values.push({ value: null });
+    return setFields(values);
+  };
+
+  const handleChangeField = (i, event) => {
+    const values = [...fields];
+    values[i].value = event.target.value;
+    return setFields(values);
+  };
+
+  const handleRemove = (i) => {
+    const values = [...fields];
+    values.splice(i, 1);
+    return setFields(values);
+  };
+
   return (
     <div>
       {/* <Button color="danger" onClick={toggle}>
@@ -32,7 +60,6 @@ const AddZipCode = ({ className }) => {
         className={className}
         style={{
           width: "300px",
-          height: "50%",
         }}
       >
         <ModalHeader toggle={toggle} style={{ borderBottom: "0px" }}>
@@ -76,34 +103,31 @@ const AddZipCode = ({ className }) => {
               >
                 Select Kitchens
               </label>
-              <ButtonComponent label="Add" type="zipaddBtn" />
-            </div>
-            <div className="col-sm-12 mt-3">
-              <SelectComponent
-                type="Slctktchn"
-                options={options}
-                onChange={handleChange}
-                value={selectedOption}
-                Placeholder="Select Kitchen"
+              <ButtonComponent
+                label="Add"
+                type="zipaddBtn"
+                onClick={handleAdd}
               />
             </div>
-            <div className="col-sm-12 mt-3">
-              <SelectComponent
-                type="Slctktchn"
-                options={options}
-                onChange={handleChange}
-                value={selectedOption}
-                Placeholder="Chicago33"
-              />
-            </div>
-            <div className="col-sm-12 mt-3">
-              <SelectComponent
-                type="Slctktchn"
-                options={options}
-                onChange={handleChange}
-                value={selectedOption}
-                Placeholder="Select Kitchen"
-              />
+
+            <div className="col-sm-10 mt-3">
+              {fields.map((field, id) => {
+                return (
+                  <div key={`${field}-${id}`}>
+                    <SelectComponent
+                      type="Slctktchn"
+                      options={options}
+                      onChange={(e) => handleChangeField(id, e)}
+                      value={selectedOption}
+                      Placeholder="Select Kitchen"
+                    />
+                    <i
+                      className="fa fa-times form-control-feedback "
+                      onClick={() => handleRemove(id)}
+                    />
+                  </div>
+                );
+              })}
             </div>
           </div>
         </ModalBody>

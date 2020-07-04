@@ -71,7 +71,7 @@ const ProductList = () => {
           </div>
         </div>
       </div>
-      <div className="col-sm-12 px-5 mt-3">
+      <div className="col-sm-12 px-5 mt-4">
         <table className="table">
           <thead>
             <tr>

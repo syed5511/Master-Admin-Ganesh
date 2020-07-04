@@ -2,17 +2,20 @@ import React, { useState } from "react";
 import { Button } from "reactstrap";
 import Logo from "./Logo";
 import SelectComponent from "./SelectComponent";
+import { useHistory, withRouter } from "react-router-dom";
 
 const Header = () => {
   const [options] = useState([
-    { value: "chocolate", label: "Chocolate" },
-    { value: "strawberry", label: "Strawberry" },
-    { value: "vanilla", label: "Vanilla" },
+    { value: "products", label: "ProductList" },
+    { value: "products/addproduct", label: "AddProduct" },
+    { value: "delivery", label: "DeliveryList" },
   ]);
   const [selectedOption] = useState(null);
+  const history = useHistory();
 
-  const handleChange = () => {
-    return selectedOption;
+  const handleChange = (e) => {
+    history.push(`/${e.value}`);
+    console.log(e.value);
   };
   return (
     <nav className="navbar fixed-top navbar-expand-md">
@@ -58,4 +61,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default withRouter(Header);
