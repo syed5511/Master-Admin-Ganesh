@@ -12,9 +12,7 @@ import SuccessAlert from "./SuccessAlert";
 import ErrorAlert from "./ErrorAlert";
 import ButtonComponent from "./ButtonComponent";
 
-const AddZipCode = ({ className }) => {
-  const [modal, setModal] = useState(true);
-
+const AddZipCode = ({ className, isModalOPen, closeModal }) => {
   const [fields, setFields] = useState([{ value: null }]);
 
   const [options] = useState([
@@ -25,11 +23,13 @@ const AddZipCode = ({ className }) => {
 
   const [selectedOption] = useState(null);
 
+  // const toggle = () => {
+  //   return setModal(!modal);
+  // };
+
   const handleChange = () => {
     return selectedOption;
   };
-
-  const toggle = () => setModal(!modal);
 
   const handleAdd = () => {
     const values = [...fields];
@@ -55,19 +55,23 @@ const AddZipCode = ({ className }) => {
         click
       </Button> */}
       <Modal
-        isOpen={modal}
-        toggle={toggle}
+        isOpen={isModalOPen}
         className={className}
         style={{
           width: "300px",
         }}
       >
-        <ModalHeader toggle={toggle} style={{ borderBottom: "0px" }}>
+        <ModalHeader style={{ borderBottom: "0px" }}>
           <label
             className="label  mb-0"
             style={{ font: "Bold 15px/20px Segoe UI" }}
           >
             ADD ZIP CODE & KITCHEN
+            <i
+              className="fa fa-times form-control-feedback fa-lg"
+              style={{ marginLeft: "60px" }}
+              onClick={closeModal}
+            />
           </label>
         </ModalHeader>
 
@@ -109,11 +113,13 @@ const AddZipCode = ({ className }) => {
                 onClick={handleAdd}
               />
             </div>
+          </div>
 
-            <div className="col-sm-10 mt-3">
-              {fields.map((field, id) => {
-                return (
-                  <div key={`${field}-${id}`}>
+          {fields.map((field, id) => {
+            return (
+              <div key={`${field}-${id}`}>
+                <div className="row">
+                  <div className="form-group col-sm-11 mt-2">
                     <SelectComponent
                       type="Slctktchn"
                       options={options}
@@ -121,15 +127,18 @@ const AddZipCode = ({ className }) => {
                       value={selectedOption}
                       Placeholder="Select Kitchen"
                     />
+                  </div>
+                  <div>
                     <i
-                      className="fa fa-times form-control-feedback "
+                      className="fa fa-times form-control-feedback"
+                      style={{ marginTop: "15px" }}
                       onClick={() => handleRemove(id)}
                     />
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                </div>
+              </div>
+            );
+          })}
         </ModalBody>
         <ModalFooter style={{ borderTop: "0px" }}>
           <div className="col-sm-12">

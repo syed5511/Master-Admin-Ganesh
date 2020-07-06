@@ -355,6 +355,10 @@ td {
   opacity: "1";
 }
 
+.fa {
+  cursor: pointer;
+}
+
 html,
 body {
   overflow-x: hidden;

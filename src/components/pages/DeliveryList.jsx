@@ -4,8 +4,11 @@ import { useState } from "react";
 import SearchComponent from "../common/SearchComponent";
 import PaginationComponent from "./../common/Pagination";
 import ButtonComponent from "../common/ButtonComponent";
+import AddZipCode from "./../common/AddZipCodePopup";
 
 const DeliveryList = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
   const [options] = useState([
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
@@ -16,6 +19,14 @@ const DeliveryList = () => {
 
   const handleChange = () => {
     return selectedOption;
+  };
+
+  const handleModal = () => {
+    return setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    return setModalOpen(!isModalOpen);
   };
   return (
     <React.Fragment>
@@ -67,7 +78,9 @@ const DeliveryList = () => {
               }
               label="ZIP CODE"
               type="addZipBtn"
+              onClick={handleModal}
             />
+            <AddZipCode isModalOPen={isModalOpen} closeModal={closeModal} />
           </div>
         </div>
       </div>
