@@ -64,7 +64,7 @@ const AddZipCode = ({ className, isModalOPen, closeModal }) => {
         <ModalHeader style={{ borderBottom: "0px" }}>
           <label
             className="label  mb-0"
-            style={{ font: "Bold 15px/20px Segoe UI" }}
+            style={{ font: "Bold 15px/20px Segoe UI", color: "#33312F" }}
           >
             ADD ZIP CODE & KITCHEN
             <i
@@ -81,6 +81,24 @@ const AddZipCode = ({ className, isModalOPen, closeModal }) => {
               <ErrorAlert label="zip code already added" />
               <SuccessAlert label="successfully added" />
             </div>
+            <div className="col-sm-8">
+              <label
+                className="label mb-0"
+                style={{ font: "Bold 14px/19px Roboto", color: "#090C1C" }}
+              >
+                Zone No: 101
+              </label>
+
+              <label
+                className="label mt-0"
+                style={{
+                  font: "Bold 14px/19px Roboto",
+                  color: "#090C1C",
+                }}
+              >
+                DeliveryPrice: Free
+              </label>
+            </div>
             <div className="col-sm-12">
               <SelectComponent
                 type="SlctState"
@@ -91,19 +109,22 @@ const AddZipCode = ({ className, isModalOPen, closeModal }) => {
               />
             </div>
 
-            <div className="col-sm-12 mt-3">
+            <div className="col-sm-12 mt-2">
               <label
                 className="label"
-                style={{ font: "Medium 14px/19px Roboto" }}
+                style={{
+                  font: "Medium 14px/19px Roboto",
+                  color: "#2F302F",
+                }}
               >
                 Enter Zip Codes
               </label>
               <textarea className="form-control" rows="3" type="text" />
             </div>
-            <div className="col-sm-12 mt-3">
+            <div className="col-sm-12 mt-1">
               <label
                 className="label"
-                style={{ font: "Medium 14px/19px Roboto" }}
+                style={{ font: "Medium 14px/19px Roboto", color: "#2F302F" }}
               >
                 Select Kitchens
               </label>
@@ -119,7 +140,7 @@ const AddZipCode = ({ className, isModalOPen, closeModal }) => {
             return (
               <div key={`${field}-${id}`}>
                 <div className="row">
-                  <div className="form-group col-sm-11 mt-2">
+                  <div className="form-group col-sm-11 mt-1">
                     <SelectComponent
                       type="Slctktchn"
                       options={options}
@@ -139,6 +160,62 @@ const AddZipCode = ({ className, isModalOPen, closeModal }) => {
               </div>
             );
           })}
+
+          <div className="row">
+            <div className=" form-group col-sm-8">
+              <label
+                className="label mb-0"
+                style={{ font: "Bold 14px/19px Roboto", color: "#090C1C" }}
+              >
+                Additional Delivery Zones
+              </label>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-sm-4">
+              <label
+                className="label mt-0"
+                style={{
+                  font: "Medium 14px/19px Roboto",
+                  color: "#2F302F",
+                }}
+              >
+                Zone No
+              </label>
+              <input
+                className="form-control "
+                type="text"
+                style={{ height: "25px", width: "60px" }}
+              />
+              <input
+                className="form-control mt-1"
+                type="text"
+                style={{ height: "25px", width: "60px" }}
+              />
+            </div>
+            <div className="col-sm-5">
+              <label
+                className="label"
+                style={{
+                  font: "Medium 14px/19px Roboto",
+                  color: "#2F302F",
+                }}
+              >
+                Delivery Price
+              </label>
+              <input
+                className="form-control"
+                type="text"
+                style={{ height: "25px", width: "70px" }}
+              />
+              <input
+                className="form-control mt-1"
+                type="text"
+                style={{ height: "25px", width: "70px" }}
+              />
+            </div>
+          </div>
         </ModalBody>
         <ModalFooter style={{ borderTop: "0px" }}>
           <div className="col-sm-12">

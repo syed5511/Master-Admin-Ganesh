@@ -170,8 +170,8 @@
   letter-spacing: 0px;
   color: #f3eded;
   float: right;
-  width: 40%;
-  height: 25px;
+  width: 30%;
+  height: 20px;
 }
 
 .button.servingDaysBtn {
@@ -233,12 +233,14 @@
 
 thead {
   background: #f3f3f3 0% 0% no-repeat padding-box;
+  text-align: start;
 }
 
 td {
   font: Bold 13px/19px Segoe UI;
   letter-spacing: 0px;
   color: #000000;
+  text-align: start;
 }
 
 .form-check-input {

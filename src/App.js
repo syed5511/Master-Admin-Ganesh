@@ -9,6 +9,18 @@ const DashBoard = lazy(() => import("./components/DashBoard"));
 const ProductList = lazy(() => import("./components/pages/ProductList"));
 const AddProduct = lazy(() => import("./components/pages/AddProduct"));
 const DeliveryList = lazy(() => import("./components/pages/DeliveryList"));
+const RegisteredKitchen = lazy(() =>
+  import("./components/pages/Kitchen/RegisteredKitchen")
+);
+const KitchenDetail = lazy(() =>
+  import("./components/pages/Kitchen/KitchenDetail")
+);
+const CustomerList = lazy(() =>
+  import("./components/pages/Customer/CustomerList")
+);
+const CustomerDetail = lazy(() =>
+  import("./components/pages/Customer/CustomerDetail")
+);
 
 const Loader = () => <div className="spinner-border"></div>;
 
@@ -23,6 +35,24 @@ const App = () => {
             <Route exact path="/products" component={ProductList} />
             <Route exact path="/products/addproduct" component={AddProduct} />
             <Route exact path="/delivery" component={DeliveryList} />
+            <Route
+              exact
+              path="/registeredkitchen"
+              component={RegisteredKitchen}
+            />
+            <Route
+              exact
+              path="/registeredkitchen/edit"
+              component={KitchenDetail}
+            />
+            <Route exact path="/customers" component={CustomerList} />
+            <Route exact path="/customers/edit" component={CustomerDetail} />
+            {/* using data
+            <Route
+              exact
+              path="/registeredkitchen/:id"
+              component={KitchenDetail}
+            /> */}
           </Switch>
           <Footer />
         </Suspense>

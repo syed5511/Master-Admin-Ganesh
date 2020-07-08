@@ -1,14 +1,10 @@
-import React from "react";
-import SelectComponent from "../common/SelectComponent";
-import { useState } from "react";
-import SearchComponent from "../common/SearchComponent";
-import PaginationComponent from "./../common/Pagination";
-import ButtonComponent from "../common/ButtonComponent";
-import AddZipCode from "./../common/AddZipCodePopup";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import PaginationComponent from "../../common/Pagination";
+import SearchComponent from "./../../common/SearchComponent";
+import SelectComponent from "./../../common/SelectComponent";
 
-const DeliveryList = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
-
+const RegisteredKitchen = () => {
   const [options] = useState([
     { value: "chocolate", label: "Chocolate" },
     { value: "strawberry", label: "Strawberry" },
@@ -21,13 +17,16 @@ const DeliveryList = () => {
     return selectedOption;
   };
 
-  const handleModal = () => {
-    return setModalOpen(true);
+  const history = useHistory();
+
+  const handleEdit = () => {
+    return history.push("/registeredkitchen/edit");
   };
 
-  const closeModal = () => {
-    return setModalOpen(!isModalOpen);
-  };
+  //   const handleEdit = (id) => {
+  //     console.log(id);
+  //     return history.push(`/registeredkitchen/${id}`);
+  //   };
   return (
     <React.Fragment>
       <div className="mt-5 pt-4">
@@ -39,7 +38,7 @@ const DeliveryList = () => {
               </b>
             </label>
             <label className="label" style={{ color: "#090C1C" }}>
-              <b>Delivery zip codes & Serving Kitchen</b>
+              <b>Registered Kitchen</b>
             </label>
           </div>
         </div>
@@ -64,61 +63,46 @@ const DeliveryList = () => {
               Placeholder="Refine By Kitchen"
             />
           </div>
-          <div className="form-group has-search col-sm-4 ml-5">
+          <div className="form-group col-sm-2">
+            <SelectComponent
+              type="refineKthnSlct"
+              options={options}
+              onChange={handleChange}
+              value={selectedOption}
+              Placeholder="Refine By Zone No"
+            />
+          </div>
+          <div className="form-group has-search col-sm-4">
             <SearchComponent
               type="text"
               placeholder="search by zip code"
               types="itemSrch"
             />
           </div>
-          <div className="form-group col-sm-3">
-            <ButtonComponent
-              icon={
-                <i className="fa fa-plus form-control-feedback mr-4 fa-sm" />
-              }
-              label="ZIP CODE"
-              type="addZipBtn"
-              onClick={handleModal}
-            />
-            <AddZipCode isModalOPen={isModalOpen} closeModal={closeModal} />
-          </div>
         </div>
       </div>
-      <div className="col-sm-12 px-5 mt-3">
+      <div className="col-sm-12 px-5 mt-4">
         <table className="table">
           <thead>
             <tr>
+              <th scop="col">Kitchen Name</th>
               <th scope="col">State</th>
+              <th scope="col">City</th>
               <th scope="col">Zip Code</th>
-              <th scope="col">Kitchen</th>
               <th scope="col">Zone No</th>
-              <th scope="col">Delivery</th>
-              <th scopr="col">Paid Delivery Zone</th>
-              <th scope="col">Action</th>
+              <th scope="col">Status</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Illinios</td>
-              <td>60077,78732,9090,22890</td>
-              <td>syed Kitchen, Varun Kitchen,asif Kitchen</td>
-              <td>101</td>
-              <td>Free</td>
-              <td>202-$9.99</td>
-              <td>
-                <ButtonComponent type="deliveryActionBtn" label="Edit" />
+              <td style={{ cursor: "pointer" }} onClick={handleEdit}>
+                Syed Kitchen
               </td>
-            </tr>
-            <tr>
-              <td>Illinios</td>
-              <td>60077,78732,9090,22890</td>
-              <td>syed Kitchen, Varun Kitchen,asif Kitchen</td>
+              <td>Illinois</td>
+              <td>Chicago</td>
+              <td>60076</td>
               <td>101</td>
-              <td>Free</td>
-              <td>202-$9.99</td>
-              <td>
-                <ButtonComponent type="deliveryActionBtn" label="Edit" />
-              </td>
+              <td style={{ color: "green" }}>Active</td>
             </tr>
           </tbody>
         </table>
@@ -127,5 +111,4 @@ const DeliveryList = () => {
     </React.Fragment>
   );
 };
-
-export default DeliveryList;
+export default RegisteredKitchen;

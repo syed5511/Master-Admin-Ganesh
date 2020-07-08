@@ -9,6 +9,8 @@ const Header = () => {
     { value: "products", label: "ProductList" },
     { value: "products/addproduct", label: "AddProduct" },
     { value: "delivery", label: "DeliveryList" },
+    { value: "registeredkitchen", label: "RegisteredKitchen" },
+    { value: "customers", label: "CustomerList" },
   ]);
   const [selectedOption] = useState(null);
   const history = useHistory();
