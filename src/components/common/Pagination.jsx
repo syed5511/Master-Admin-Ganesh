@@ -20,7 +20,7 @@ const PaginationComponent = () => {
         right: "0px",
         position: "fixed",
         bottom: "60px",
-        marginRight: "50px",
+        marginRight: "100px",
       }}
     >
       <Pagination count={10} variant="outlined" shape="rounded" />
