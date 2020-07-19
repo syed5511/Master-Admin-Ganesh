@@ -65,3 +65,4 @@ export default App;
 
 // This is to test GITHUB tags 
 // This is the secong test tag for v1.1
+// this is the third tag to test for v1.2
