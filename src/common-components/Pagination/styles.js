@@ -15,6 +15,7 @@ export const BPagination = styled(BSPagination)`
   .page-link {
     color: #10182f;
     border-radius: 5px;
+    padding: 3px 10px;
   }
   .page-item {
     margin: 0 6px;

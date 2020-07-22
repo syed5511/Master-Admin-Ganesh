@@ -67,77 +67,24 @@
 // This is the secong test tag for v1.1
 // this is the third tag to test for v1.2
 
-import React, { useState } from "react";
+import React, { lazy, Suspense } from "react";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import "./App.css";
+import history from "./history";
 
-import Layout from "./common-components/Layout";
-import Table from "./common-components/Table";
-import Pagination from "./common-components/Pagination";
+const ProductPage = lazy(() => import("./pages/product"));
+
+const Loader = () => <div className="spinner-border"></div>;
 
 const App = () => {
-  const [page, setPage] = useState(1);
-  const cols = [
-    {
-      key: "item_name",
-      heading: "Item Name",
-    },
-    {
-      key: "item_type",
-      heading: "Item Type",
-    },
-    {
-      key: "kitchen_name",
-      heading: "Kitchen Name",
-    },
-    {
-      key: "city",
-      heading: "City",
-    },
-    {
-      key: "zip_code",
-      heading: "Zip Code",
-    },
-    {
-      key: "serving_days",
-      heading: "Serving Days",
-    },
-    {
-      key: "status",
-      heading: "Status",
-      type: "render",
-      render: (r) => (
-        <div
-          style={r.status === "Active" ? { color: "green" } : { color: "red" }}
-        >
-          {r.status}
-        </div>
-      ),
-    },
-  ];
-  const list = [
-    {
-      item_name: "Chicken Biryani Chicken",
-      item_type: "Main Course",
-      kitchen_name: "Syed Kitchen 5511",
-      city: "Chicago",
-      zip_code: 60078,
-      serving_days: "Sunday, Monday, Tuesday",
-      status: "Active",
-    },
-    {
-      item_name: "Chicken Biryani Chicken",
-      item_type: "Main Course",
-      kitchen_name: "Syed Kitchen 5511",
-      city: "Chicago",
-      zip_code: 60078,
-      serving_days: "Sunday, Monday, Tuesday",
-      status: "Inactive",
-    },
-  ];
   return (
-    <Layout>
-      <Table cols={cols} list={list} size="sm" />
-      <Pagination page={page} onPageChange={setPage} total={10} />
-    </Layout>
+    <Router history={history}>
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route exact path="/products" component={ProductPage} />
+        </Switch>
+      </Suspense>
+    </Router>
   );
 };
 

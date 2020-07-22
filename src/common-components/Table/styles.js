@@ -10,6 +10,10 @@ export const BTable = styled(BSTable)`
     padding: 0.8rem;
     font-size: 14px;
     line-height: 19px;
+    font-family: Helvetica;
+  }
+  &.table-sm td {
+    font-weight: normal;
   }
 `;
 
