@@ -9,12 +9,14 @@ const TextAreaControl = ({
   placeholder,
   disabled,
   setValues,
+  required,
 }) => (
   <Control
     name={name}
     as="textarea"
     placeholder={placeholder}
     disabled={disabled}
+    required={required}
     onChange={(e) => {
       setValues({ ...values, [name]: e.target.value });
     }}
@@ -28,10 +30,12 @@ TextAreaControl.propTypes = {
   values: shape({}).isRequired,
   setValues: func.isRequired,
   disabled: bool,
+  required: bool,
 };
 
 TextAreaControl.defaultProps = {
   disabled: false,
+  required: false,
 };
 
 export default TextAreaControl;

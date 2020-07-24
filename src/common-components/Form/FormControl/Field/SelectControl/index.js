@@ -10,12 +10,14 @@ const SelectControl = ({
   options,
   disabled,
   setValues,
+  required,
 }) => (
   <Control
     name={name}
     as="select"
     multiple={multiple}
     disabled={disabled}
+    required={required}
     onChange={(e) => {
       setValues({ ...values, [name]: e.target.value });
     }}
@@ -33,6 +35,7 @@ SelectControl.propTypes = {
   name: string.isRequired,
   values: shape({}).isRequired,
   setValues: func.isRequired,
+  required: bool,
   multiple: bool,
   disabled: bool,
   options: arrayOf(shape({})),
@@ -41,6 +44,7 @@ SelectControl.propTypes = {
 SelectControl.defaultProps = {
   multiple: false,
   options: [],
+  required: false,
   disabled: false,
 };
 

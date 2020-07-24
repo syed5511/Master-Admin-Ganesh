@@ -70,21 +70,31 @@
 import React, { lazy, Suspense } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import "./App.css";
+import Layout from "./common-components/Layout";
 import history from "./history";
 
-const ProductPage = lazy(() => import("./pages/product"));
+const ProductsPage = lazy(() => import("./pages/products"));
+const DeliveryPage = lazy(() => import("./pages/delivery"));
 
 const Loader = () => <div className="spinner-border"></div>;
 
 const App = () => {
   return (
-    <Router history={history}>
-      <Suspense fallback={<Loader />}>
-        <Switch>
-          <Route exact path="/products" component={ProductPage} />
-        </Switch>
-      </Suspense>
-    </Router>
+    <Layout history={history}>
+      <Router history={history}>
+        <Suspense fallback={<Loader />}>
+          <Switch>
+            <Route exact path="/" component={() => <div>Home</div>} />
+          </Switch>
+          <Switch>
+            <Route exact path="/products" component={ProductsPage} />
+          </Switch>
+          <Switch>
+            <Route exact path="/delivery" component={DeliveryPage} />
+          </Switch>
+        </Suspense>
+      </Router>
+    </Layout>
   );
 };
 

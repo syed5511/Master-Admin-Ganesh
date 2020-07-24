@@ -9,6 +9,7 @@ const InputControl = ({
   placeholder,
   values,
   disabled,
+  required,
   setValues,
 }) => (
   <Control
@@ -16,6 +17,7 @@ const InputControl = ({
     type={inputType}
     placeholder={placeholder}
     disabled={disabled}
+    required={required}
     onChange={(e) => {
       setValues({ ...values, [name]: e.target.value });
     }}
@@ -25,6 +27,7 @@ const InputControl = ({
 
 InputControl.propTypes = {
   inputType: string,
+  required: bool,
   name: string.isRequired,
   placeholder: string,
   values: shape({}).isRequired,
@@ -36,6 +39,7 @@ InputControl.defaultProps = {
   inputType: "text",
   placeholder: "Enter",
   disabled: false,
+  required: false,
 };
 
 export default InputControl;

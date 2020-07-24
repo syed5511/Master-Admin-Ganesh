@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { shape, func, string } from "prop-types";
-import Button from "react-bootstrap/Button";
 
 import FormControl from "./FormControl";
+import Button from "../Button";
 import getInitialValues from "./utils/getInitialValues";
 import {
   Container,
@@ -13,13 +13,21 @@ import {
 } from "./styles";
 
 const Form = ({ form, getValues, formValues }) => {
-  const { title, controls, getValuesOn = ["submit"], formMode = "edit" } = form; // formMode --> [edit, preview]
+  const {
+    title,
+    controls,
+    getValuesOn = ["submit"],
+    formMode = "edit",
+    showActions = true,
+  } = form; // formMode --> [edit, preview]
+  const [mounted, setMounted] = useState(false);
+  const [validated, setValidated] = useState(false);
   const [mode, setMode] = useState(formMode);
   const initialValues = getInitialValues(controls);
   const [values, setValues] = useState(initialValues);
 
   useEffect(() => {
-    if (getValuesOn.indexOf("change") !== -1) {
+    if (mounted && getValuesOn.indexOf("change") !== -1) {
       getValues(values);
     }
   }, [JSON.stringify(values)]);
@@ -28,15 +36,27 @@ const Form = ({ form, getValues, formValues }) => {
     setValues({ ...values, ...formValues });
   }, [JSON.stringify(formValues)]);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const onFormSubmit = (e) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    console.log("form.checkValidity()", form.checkValidity());
+    if (form.checkValidity() === false) {
+      e.stopPropagation();
+      return;
+    }
+
+    setValidated(true);
     getValues(values);
   };
 
   return (
     <Container>
       {title && <FormTitle>{title}</FormTitle>}
-      <FormContainer onSubmit={onFormSubmit}>
+      <FormContainer onSubmit={onFormSubmit} noValidate validated={validated}>
         <GridRow>
           {controls.map((item) => (
             <FormControl
@@ -48,27 +68,33 @@ const Form = ({ form, getValues, formValues }) => {
             />
           ))}
         </GridRow>
-        {mode === "edit" ? (
+        {showActions && (
           <Actions>
-            <Button
-              type="button"
-              onClick={() => {
-                setMode("preview");
-              }}
-            >
-              CANCEL
-            </Button>
-            <Button type="submit">SUBMIT</Button>
+            {mode === "edit" ? (
+              <>
+                <Button
+                  onClick={() => {
+                    setMode("preview");
+                  }}
+                  theme="cancel"
+                >
+                  CANCEL
+                </Button>
+                <Button type="submit" theme="submit">
+                  SUBMIT
+                </Button>
+              </>
+            ) : (
+              <Button
+                onClick={() => {
+                  setMode("edit");
+                }}
+                theme="edit"
+              >
+                Edit
+              </Button>
+            )}
           </Actions>
-        ) : (
-          <Button
-            type="button"
-            onClick={() => {
-              setMode("edit");
-            }}
-          >
-            Edit
-          </Button>
         )}
       </FormContainer>
     </Container>

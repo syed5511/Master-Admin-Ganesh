@@ -1,5 +1,5 @@
 import React from "react";
-import { node } from "prop-types";
+import { node, shape } from "prop-types";
 import Col from "react-bootstrap/Col";
 
 import Header from "./Header";
@@ -7,14 +7,15 @@ import Footer from "./Footer";
 import BreadCrumbs from "../BreadCrumbs";
 import { Body, Row } from "./styles";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, history }) => {
   const list = [
     { text: "Products", href: "#", active: false },
     { text: "Add Product", active: true },
   ];
+  console.log(history);
   return (
     <>
-      <Header />
+      <Header history={history} />
       <Row>
         <Col xs={12} sm={{ span: 8, offset: 2 }}>
           <BreadCrumbs list={list} />
@@ -28,6 +29,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: node.isRequired,
+  history: shape({}).isRequired,
 };
 
 export default Layout;

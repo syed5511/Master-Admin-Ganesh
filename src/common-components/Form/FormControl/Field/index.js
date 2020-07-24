@@ -5,6 +5,7 @@ import InputControl from "./InputControl";
 import SelectControl from "./SelectControl";
 import TextAreaControl from "./TextAreaControl";
 import StaticControl from "./StaticControl";
+import TagControl from "./TagControl";
 
 const Field = ({ type, mode, ...rest }) => {
   if (mode === "preview") {
@@ -15,6 +16,8 @@ const Field = ({ type, mode, ...rest }) => {
       return <InputControl {...rest} />;
     case "textarea":
       return <TextAreaControl {...rest} />;
+    case "tags":
+      return <TagControl {...rest} />;
     case "select":
       return <SelectControl {...rest} />;
     case "static":
