@@ -3,13 +3,13 @@ const filters = {
   getValuesOn: ["change"],
   controls: [
     {
-      name: "days",
+      name: "state",
       type: "select",
       col: { xs: 6, sm: 4, md: 2 },
       options: [
-        { value: "", label: "Days" },
-        { value: "sunday", label: "Sunday" },
-        { value: "monday", label: "Monday" },
+        { value: "", label: "State" },
+        { value: "illinios", label: "Illinios" },
+        { value: "albama", label: "Albama" },
       ],
     },
     {
@@ -18,16 +18,6 @@ const filters = {
       col: { xs: 6, sm: 4, md: 2 },
       options: [
         { value: "", label: "Kitchen" },
-        { value: "one", label: "One" },
-        { value: "two", label: "Two" },
-      ],
-    },
-    {
-      name: "item_type",
-      type: "select",
-      col: { xs: 6, sm: 4, md: 2 },
-      options: [
-        { value: "", label: "Item Type" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],

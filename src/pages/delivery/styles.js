@@ -12,7 +12,7 @@ export const TopContainer = styled.div`
 `;
 
 export const Button = styled(BButton)`
-  &.add-product {
+  &.add-zip-code {
     padding: 4px 12px !important;
   }
 `;

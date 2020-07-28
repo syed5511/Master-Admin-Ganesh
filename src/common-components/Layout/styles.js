@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import BRow from "react-bootstrap/Row";
 
-export const Body = styled.main``;
+export const Body = styled.main`
+  height: 100%;
+`;
 
 export const Row = styled(BRow)`
   margin-left: 0;

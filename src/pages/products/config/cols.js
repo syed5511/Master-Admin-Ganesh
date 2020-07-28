@@ -1,9 +1,22 @@
 import React from "react";
 
+import {
+  NameWrap,
+  Name,
+  Placeholder,
+  Status,
+} from "../../../common-components/common/table-items-style";
+
 const cols = [
   {
     key: "item_name",
     heading: "Item Name",
+    type: "render",
+    render: (r) => (
+      <NameWrap>
+        <Placeholder /> <Name>{r.item_name}</Name>
+      </NameWrap>
+    ),
   },
   {
     key: "item_type",
@@ -29,13 +42,7 @@ const cols = [
     key: "status",
     heading: "Status",
     type: "render",
-    render: (r) => (
-      <div
-        style={r.status === "Active" ? { color: "green" } : { color: "red" }}
-      >
-        {r.status}
-      </div>
-    ),
+    render: (r) => <Status className={r.status}>{r.status}</Status>,
   },
 ];
 

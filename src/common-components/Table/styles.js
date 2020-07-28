@@ -14,6 +14,7 @@ export const BTable = styled(BSTable)`
   }
   &.table-sm td {
     font-weight: normal;
+    vertical-align: middle;
   }
 `;
 
