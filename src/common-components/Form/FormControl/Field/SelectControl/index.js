@@ -18,6 +18,7 @@ const SelectControl = ({
     multiple={multiple}
     disabled={disabled}
     required={required}
+    custom
     onChange={(e) => {
       setValues({ ...values, [name]: e.target.value });
     }}

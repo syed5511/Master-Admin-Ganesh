@@ -79,6 +79,10 @@ const LoginPage = lazy(() => import("./pages/login"));
 const SignUpPage = lazy(() => import("./pages/signup"));
 const ProductsPage = lazy(() => import("./pages/products"));
 const DeliveryPage = lazy(() => import("./pages/delivery"));
+const KitchenPage = lazy(() => import("./pages/kitchen"));
+const CustomerPage = lazy(() => import("./pages/customer"));
+const AddProductPage = lazy(() => import("./pages/add-product"));
+const KitchenDetailsPage = lazy(() => import("./pages/kitchen-details"));
 
 const Loader = () => <div className="spinner-border"></div>;
 
@@ -101,6 +105,26 @@ const App = () => {
           </Switch>
           <Switch>
             <Route exact path="/delivery" component={DeliveryPage} />
+          </Switch>
+          <Switch>
+            <Route exact path="/kitchen" component={KitchenPage} />
+          </Switch>
+          <Switch>
+            <Route exact path="/customer" component={CustomerPage} />
+          </Switch>
+          <Switch>
+            <Route
+              exact
+              path="/products/add-product"
+              component={AddProductPage}
+            />
+          </Switch>
+          <Switch>
+            <Route
+              exact
+              path="/kitchen/kitchen-details"
+              component={KitchenDetailsPage}
+            />
           </Switch>
         </Suspense>
       </Router>

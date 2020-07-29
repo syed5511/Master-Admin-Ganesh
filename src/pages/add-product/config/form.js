@@ -1,6 +1,19 @@
 const form = {
-  title: "Some Form",
+  getValuesOn: ["change", "submit"],
   controls: [
+    {
+      name: "product_id",
+      type: "static",
+      label: "Product ID",
+      value: "1234567890AM",
+    },
+    {
+      name: "product_image",
+      type: "file",
+      id: "product_image",
+      label: "Upload Image",
+      placeholder: "Attach File",
+    },
     {
       name: "kitchen_name",
       type: "select",

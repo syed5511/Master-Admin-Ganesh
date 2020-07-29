@@ -4,6 +4,7 @@ import { string } from "prop-types";
 import InputControl from "./InputControl";
 import SelectControl from "./SelectControl";
 import TextAreaControl from "./TextAreaControl";
+import FileControl from "./FileControl";
 import StaticControl from "./StaticControl";
 import TagControl from "./TagControl";
 
@@ -18,6 +19,8 @@ const Field = ({ type, mode, ...rest }) => {
       return <TextAreaControl {...rest} />;
     case "tags":
       return <TagControl {...rest} />;
+    case "file":
+      return <FileControl {...rest} />;
     case "select":
       return <SelectControl {...rest} />;
     case "static":

@@ -31,16 +31,19 @@ const Header = ({ history, pageOptions, type, pathname, page, setPage }) => {
     );
   };
 
+  const filteredOptions = pageOptions.filter((item) => item.includeInSelect);
+
   return (
     <Container>
       <Row>
         <Col xs={12} sm={{ span: 10, offset: 1 }}>
           <Left>
             <Logo>Logo Logo</Logo>
-            {type === "private" && pageOptions.length > 0 && (
+            {type === "private" && filteredOptions.length > 0 && (
               <Control
                 as="select"
                 value={page}
+                custom
                 onChange={(e) => {
                   const val = e.target.value;
                   setPage(val);
@@ -50,7 +53,7 @@ const Header = ({ history, pageOptions, type, pathname, page, setPage }) => {
                 }}
               >
                 <option value="">Select</option>
-                {pageOptions.map((item) => (
+                {filteredOptions.map((item) => (
                   <option key={item.value} value={item.value}>
                     {item.label}
                   </option>
