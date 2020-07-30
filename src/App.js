@@ -83,6 +83,7 @@ const KitchenPage = lazy(() => import("./pages/kitchen"));
 const CustomerPage = lazy(() => import("./pages/customer"));
 const AddProductPage = lazy(() => import("./pages/add-product"));
 const KitchenDetailsPage = lazy(() => import("./pages/kitchen-details"));
+const CustomerDetailsPage = lazy(() => import("./pages/customer-details"));
 
 const Loader = () => <div className="spinner-border"></div>;
 
@@ -124,6 +125,13 @@ const App = () => {
               exact
               path="/kitchen/kitchen-details"
               component={KitchenDetailsPage}
+            />
+          </Switch>
+          <Switch>
+            <Route
+              exact
+              path="/customer/customer-details"
+              component={CustomerDetailsPage}
             />
           </Switch>
         </Suspense>

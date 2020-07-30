@@ -39,6 +39,12 @@ const pageOptions = [
     key: "kitchen-details",
     breadCrumbValue: "Kitchen Details",
   },
+  {
+    label: "Customer Details",
+    value: "/customer/customer-details",
+    key: "customer-details",
+    breadCrumbValue: "Customer Details",
+  },
 ];
 
 export default pageOptions;

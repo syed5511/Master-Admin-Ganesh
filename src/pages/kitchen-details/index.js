@@ -4,6 +4,7 @@ import { withRouter } from "react-router";
 import Tabs from "../../common-components/Tabs";
 import tabs from "./config/tabs";
 import content from "./config/content";
+import renderValue from "./utils/renderValue";
 import {
   MajorDetails,
   Detail,
@@ -38,7 +39,7 @@ const KitchenDetailsPage = () => {
           {content[tab].map((item) => (
             <Detail key={item.label} className="column">
               <Label>{item.label}</Label>
-              <Value>{item.value}</Value>
+              <Value className="content">{renderValue(item)}</Value>
             </Detail>
           ))}
         </TabContent>

@@ -27,6 +27,11 @@ const kitchenDetails = [
     label: "Zone No",
     value: "101",
   },
+  {
+    label: "Status",
+    value: "Active",
+    func: "renderStatusSwitch",
+  },
 ];
 
 export default kitchenDetails;

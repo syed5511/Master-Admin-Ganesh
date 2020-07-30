@@ -45,20 +45,10 @@ export const TabContainer = styled.div`
     flex: 1;
     &:first-child {
       margin-right: 24px;
-      flex: 0 0 293px;
+      flex: 0 0 233px;
     }
   }
   @media (max-width: 768px) {
     flex-direction: column;
   }
-`;
-
-export const TabContent = styled.div`
-  background: #ffffff;
-  border: 1px solid #ebebeb;
-  border-radius: 6px;
-  padding: 24px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
 `;
