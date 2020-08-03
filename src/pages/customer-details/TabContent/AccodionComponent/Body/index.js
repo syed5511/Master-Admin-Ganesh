@@ -1,17 +1,20 @@
 import React from "react";
 
 import Accordion from "../../../../../common-components/Accordion";
-import Header from "./Header";
+import InnerHeader from "./InnerHeader";
+import InnerBody from "./InnerBody";
 
 const Body = ({ list: propList }) => {
   const list = propList.map((item, i) => {
+    const headerList = item.header_details;
+    const bodyList = item.body_details;
     return {
-      cardKey: `outer_accordion_${i}`,
-      header: () => <Header list={item.subscription_details || {}} />,
-      body: () => item.orders.map((data) => <div>Ab</div>),
+      cardKey: `inner_accordion_${i}`,
+      header: () => <InnerHeader headerList={headerList} />,
+      body: () => <InnerBody bodyList={bodyList} />,
     };
   });
-  return <Accordion list={list} />;
+  return <Accordion list={list} theme="blue" />;
 };
 
 export default Body;

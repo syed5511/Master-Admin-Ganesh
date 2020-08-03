@@ -40,12 +40,14 @@ export const Value = styled.div`
 
 export const TabContainer = styled.div`
   margin-top: 24px;
+  margin-bottom: 24px;
   display: flex;
   & > div {
     flex: 1;
     &:first-child {
-      margin-right: 24px;
-      flex: 0 0 233px;
+      margin-right: 8px;
+      flex: 0 0 188px;
+      align-self: self-start;
     }
   }
   @media (max-width: 768px) {

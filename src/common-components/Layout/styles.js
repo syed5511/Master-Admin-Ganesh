@@ -9,4 +9,5 @@ export const Row = styled(BRow)`
   margin-left: 0;
   margin-right: 0;
   min-height: calc(100vh - 141px);
+  overflow: hidden;
 `;

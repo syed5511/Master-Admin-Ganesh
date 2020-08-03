@@ -1,6 +1,13 @@
 import React from "react";
 
-import { Container, Detail, Value, Label } from "./styles";
+import {
+  Container,
+  Detail,
+  Value,
+  Label,
+  ComplementaryButton,
+  Items,
+} from "./styles";
 
 const Header = ({ list }) => {
   const renderItem = (data, type = null) => (
@@ -21,7 +28,18 @@ const Header = ({ list }) => {
     }
   };
 
-  return <Container>{list.map(renderItems)}</Container>;
+  return (
+    <Container>
+      <Items>{list.map(renderItems)}</Items>
+      <ComplementaryButton
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
+        + Comp Plate
+      </ComplementaryButton>
+    </Container>
+  );
 };
 
 export default Header;
