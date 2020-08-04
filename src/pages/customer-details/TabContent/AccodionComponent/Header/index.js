@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
+import Modal from "../../../../../common-components/Modal";
+import SubscriptionInvoice from "./SubscriptionInvoice";
 import {
   Container,
   Detail,
@@ -7,9 +9,12 @@ import {
   Label,
   ComplementaryButton,
   Items,
+  InvoiceDetails,
+  Actions,
 } from "./styles";
 
 const Header = ({ list }) => {
+  const [showInvoice, setShowInvoice] = useState(false);
   const renderItem = (data, type = null) => (
     <Detail key={data.key}>
       <Label>{data.label}</Label>
@@ -29,15 +34,40 @@ const Header = ({ list }) => {
   };
 
   return (
-    <Container>
+    <Container
+      onClick={(e) => {
+        e.stopPropagation();
+      }}
+    >
       <Items>{list.map(renderItems)}</Items>
-      <ComplementaryButton
-        onClick={(e) => {
-          e.stopPropagation();
-        }}
-      >
-        + Comp Plate
-      </ComplementaryButton>
+      <Actions>
+        <InvoiceDetails
+          onClick={(e) => {
+            e.stopPropagation();
+            setShowInvoice(true);
+          }}
+        >
+          i
+        </InvoiceDetails>
+        <ComplementaryButton
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          + Comp Plate
+        </ComplementaryButton>
+      </Actions>
+      {showInvoice && (
+        <Modal
+          title="Subscription Invoice"
+          show={showInvoice}
+          onClose={() => {
+            setShowInvoice(false);
+          }}
+        >
+          <SubscriptionInvoice />
+        </Modal>
+      )}
     </Container>
   );
 };

@@ -7,6 +7,7 @@ import TextAreaControl from "./TextAreaControl";
 import FileControl from "./FileControl";
 import StaticControl from "./StaticControl";
 import TagControl from "./TagControl";
+import CheckboxGroupControl from "./CheckboxGroupControl";
 
 const Field = ({ type, mode, ...rest }) => {
   if (mode === "preview") {
@@ -23,6 +24,8 @@ const Field = ({ type, mode, ...rest }) => {
       return <FileControl {...rest} />;
     case "select":
       return <SelectControl {...rest} />;
+    case "checkbox-group":
+      return <CheckboxGroupControl {...rest} />;
     case "static":
       return <StaticControl {...rest} />;
     default:

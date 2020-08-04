@@ -7,7 +7,7 @@ import {
   Status,
 } from "../../../common-components/common/table-items-style";
 
-const cols = [
+const cols = (setServingDays) => [
   {
     key: "item_name",
     heading: "Item Name",
@@ -37,6 +37,16 @@ const cols = [
   {
     key: "serving_days",
     heading: "Serving Days",
+    type: "render",
+    render: (r) => (
+      <Name
+        onClick={() => {
+          setServingDays(r);
+        }}
+      >
+        {r.serving_days.join(", ")}
+      </Name>
+    ),
   },
   {
     key: "status",

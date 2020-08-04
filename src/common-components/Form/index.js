@@ -12,17 +12,15 @@ import {
   Actions,
 } from "./styles";
 
-const Form = ({ form, getValues, formValues }) => {
+const Form = ({ form, getValues, formValues, mode, onEdit, onCancel }) => {
   const {
     title,
     controls,
     getValuesOn = ["submit"],
-    formMode = "edit",
     showActions = true,
-  } = form; // formMode --> [edit, preview]
+  } = form;
   const [mounted, setMounted] = useState(false);
   const [validated, setValidated] = useState(false);
-  const [mode, setMode] = useState(formMode);
   const initialValues = getInitialValues(controls);
   const [values, setValues] = useState(initialValues);
 
@@ -72,12 +70,7 @@ const Form = ({ form, getValues, formValues }) => {
           <Actions>
             {mode === "edit" ? (
               <>
-                <Button
-                  onClick={() => {
-                    setMode("preview");
-                  }}
-                  theme="cancel"
-                >
+                <Button onClick={onCancel} theme="cancel">
                   CANCEL
                 </Button>
                 <Button type="submit" theme="submit">
@@ -85,12 +78,7 @@ const Form = ({ form, getValues, formValues }) => {
                 </Button>
               </>
             ) : (
-              <Button
-                onClick={() => {
-                  setMode("edit");
-                }}
-                theme="edit"
-              >
+              <Button onClick={onEdit} theme="edit">
                 Edit
               </Button>
             )}
@@ -106,11 +94,15 @@ Form.propTypes = {
   getValues: func.isRequired,
   formValues: shape({}),
   mode: string,
+  onEdit: func,
+  onCancel: func,
 };
 
 Form.defaultProps = {
   formValues: {},
   mode: "edit",
+  onEdit: () => {},
+  onCancel: () => {},
 };
 
 export default Form;

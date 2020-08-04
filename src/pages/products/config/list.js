@@ -5,7 +5,7 @@ const list = [
     kitchen_name: "Syed Kitchen 5511",
     city: "Chicago",
     zip_code: 60078,
-    serving_days: "Sunday, Monday, Tuesday",
+    serving_days: ["Sun", "Mon", "Tue"],
     status: "Active",
   },
   {
@@ -14,7 +14,7 @@ const list = [
     kitchen_name: "Syed Kitchen 5511",
     city: "Chicago",
     zip_code: 60078,
-    serving_days: "Sunday, Monday, Tuesday",
+    serving_days: ["Sun", "Mon", "Tue"],
     status: "Inactive",
   },
 ];

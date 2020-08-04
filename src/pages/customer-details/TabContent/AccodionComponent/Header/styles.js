@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const Detail = styled.div`
   display: flex;
-  padding-right: 24px;
+  padding-right: 12px;
   flex-direction: column;
   align-items: flex-start;
 `;
@@ -42,7 +42,8 @@ export const ComplementaryButton = styled.button`
   color: #75716b;
   border: none;
   text-shadow: 0px 3px 6px #00000029;
-  margin-right: 8px;
+  margin: 0 8px;
+  padding: 4px;
   &:active {
     box-shadow: none;
   }
@@ -55,4 +56,24 @@ export const Items = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+`;
+
+export const InvoiceDetails = styled.div`
+  width: 24px;
+  height: 24px;
+  border: 1px solid #e1e1e1;
+  border-radius: 50%;
+  display: flex;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #ff991f;
+  font-weight: bold;
+  background-color: #fff;
+`;
+
+export const Actions = styled.div`
+  display: flex;
+  align-items: center;
 `;
