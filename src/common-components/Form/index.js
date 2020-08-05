@@ -12,13 +12,16 @@ import {
   Actions,
 } from "./styles";
 
-const Form = ({ form, getValues, formValues, mode, onEdit, onCancel }) => {
-  const {
-    title,
-    controls,
-    getValuesOn = ["submit"],
-    showActions = true,
-  } = form;
+const Form = ({
+  form,
+  getValues,
+  formValues,
+  mode,
+  onEdit,
+  onCancel,
+  onSubmit,
+}) => {
+  const { title, controls, getValuesOn = [], showActions = true } = form;
   const [mounted, setMounted] = useState(false);
   const [validated, setValidated] = useState(false);
   const initialValues = getInitialValues(controls);
@@ -44,11 +47,12 @@ const Form = ({ form, getValues, formValues, mode, onEdit, onCancel }) => {
     console.log("form.checkValidity()", form.checkValidity());
     if (form.checkValidity() === false) {
       e.stopPropagation();
+      onSubmit(null);
       return;
     }
 
     setValidated(true);
-    getValues(values);
+    onSubmit(values);
   };
 
   return (
@@ -96,6 +100,7 @@ Form.propTypes = {
   mode: string,
   onEdit: func,
   onCancel: func,
+  onSubmit: func,
 };
 
 Form.defaultProps = {
@@ -103,6 +108,7 @@ Form.defaultProps = {
   mode: "edit",
   onEdit: () => {},
   onCancel: () => {},
+  onSubmit: () => {},
 };
 
 export default Form;

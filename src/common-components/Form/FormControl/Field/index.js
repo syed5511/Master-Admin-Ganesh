@@ -3,6 +3,7 @@ import { string } from "prop-types";
 
 import InputControl from "./InputControl";
 import SelectControl from "./SelectControl";
+import MultiSelectControl from "./MultiSelectControl";
 import TextAreaControl from "./TextAreaControl";
 import FileControl from "./FileControl";
 import StaticControl from "./StaticControl";
@@ -24,6 +25,8 @@ const Field = ({ type, mode, ...rest }) => {
       return <FileControl {...rest} />;
     case "select":
       return <SelectControl {...rest} />;
+    case "multi-select":
+      return <MultiSelectControl {...rest} />;
     case "checkbox-group":
       return <CheckboxGroupControl {...rest} />;
     case "static":

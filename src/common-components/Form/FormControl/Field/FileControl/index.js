@@ -1,6 +1,9 @@
 import React from "react";
 import { string, shape, func, bool } from "prop-types";
 import Form from "react-bootstrap/Form";
+
+import { SelectedFile } from "../../styles";
+
 const { File } = Form;
 
 const FormControl = ({
@@ -13,19 +16,24 @@ const FormControl = ({
   fileButtonText,
   ...rest
 }) => (
-  <File
-    name={name}
-    label={placeholder}
-    data-browse={fileButtonText}
-    disabled={disabled}
-    required={required}
-    onChange={(e) => {
-      setValues({ ...values, [name]: e.target.value });
-    }}
-    value={values[name]}
-    custom
-    {...rest}
-  />
+  <>
+    <File
+      name={name}
+      label={placeholder}
+      data-browse={fileButtonText}
+      disabled={disabled}
+      required={required}
+      onChange={(e) => {
+        setValues({ ...values, [name]: [...e.target.files] });
+      }}
+      // value={values[name]}
+      custom
+      {...rest}
+    />
+    {(values[name] || []).length > 0 && (
+      <SelectedFile>{values[name].map((f) => f.name).join(", ")}</SelectedFile>
+    )}
+  </>
 );
 
 FormControl.propTypes = {

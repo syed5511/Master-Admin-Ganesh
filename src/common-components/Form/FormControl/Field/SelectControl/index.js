@@ -6,7 +6,6 @@ const { Control } = Form;
 const SelectControl = ({
   name,
   values,
-  multiple,
   options,
   disabled,
   setValues,
@@ -15,7 +14,6 @@ const SelectControl = ({
   <Control
     name={name}
     as="select"
-    multiple={multiple}
     disabled={disabled}
     required={required}
     custom
@@ -37,13 +35,11 @@ SelectControl.propTypes = {
   values: shape({}).isRequired,
   setValues: func.isRequired,
   required: bool,
-  multiple: bool,
   disabled: bool,
   options: arrayOf(shape({})),
 };
 
 SelectControl.defaultProps = {
-  multiple: false,
   options: [],
   required: false,
   disabled: false,

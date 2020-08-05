@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
 export const Value = styled.div`
-  font-size: 16px;
+  font-size: 12px;
+  line-height: 16px;
 `;

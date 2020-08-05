@@ -6,13 +6,8 @@ const form = {
       type: "static",
       label: "Product ID",
       value: "1234567890AM",
-    },
-    {
-      name: "product_image",
-      type: "file",
-      id: "product_image",
-      label: "Upload Image",
-      placeholder: "Attach File",
+      inline: true,
+      col: { xs: 12, sm: 12, md: 12 },
     },
     {
       name: "kitchen_name",
@@ -43,11 +38,28 @@ const form = {
       placeholder: "Enter Item Name",
     },
     {
-      name: "recipe_with",
-      type: "input",
-      label: "Recipe With",
-      inputType: "text",
-      placeholder: "Enter Recipe With",
+      name: "serving_temperature",
+      type: "multi-select",
+      label: "Serving Temperature",
+      col: { xs: 12, sm: 6, md: 6 },
+      options: [
+        {
+          label: "Select",
+          value: "",
+        },
+        {
+          label: "30 C",
+          value: "30_c",
+        },
+        {
+          label: "40 C",
+          value: "40_c",
+        },
+        {
+          label: "50 C",
+          value: "50_c",
+        },
+      ],
     },
     {
       name: "ingredients",
@@ -56,11 +68,99 @@ const form = {
       placeholder: "Enter Ingredients",
     },
     {
-      name: "Tags",
-      type: "tags",
-      label: "Tags",
-      placeholder: "Enter Tags",
+      name: "recipe_with",
+      type: "textarea",
+      label: "Recipe With",
+      placeholder: "Enter Recipe With",
     },
+    {
+      name: "size_single_person",
+      type: "input",
+      label: "Size Single Person",
+      inputType: "text",
+      col: { xs: 12, sm: 6, md: 3 },
+      placeholder: "Enter",
+    },
+    {
+      name: "size_double_person",
+      type: "input",
+      label: "Size Double Person",
+      col: { xs: 12, sm: 6, md: 3 },
+      inputType: "text",
+      placeholder: "Enter",
+    },
+    {
+      name: "special_marketing",
+      type: "select",
+      label: "Special Marketing",
+      options: [
+        { value: "", label: "Select" },
+        { value: "one", label: "One" },
+        { value: "two", label: "Two" },
+      ],
+    },
+    {
+      name: "allergic_ingredients",
+      type: "select",
+      label: "Allergic Ingredients",
+      options: [
+        { value: "", label: "Select" },
+        { value: "one", label: "One" },
+        { value: "two", label: "Two" },
+      ],
+    },
+    {
+      name: "product_image",
+      type: "file",
+      id: "product_image",
+      label: "Upload Image",
+      placeholder: "Attach File",
+    },
+    {
+      name: "chef_name",
+      type: "select",
+      label: "Chef Name",
+      options: [
+        { value: "", label: "Select" },
+        { value: "one", label: "One" },
+        { value: "two", label: "Two" },
+      ],
+    },
+    {
+      name: "cuisine_type",
+      type: "select",
+      label: "Cuisine type",
+      options: [
+        { value: "", label: "Select" },
+        { value: "one", label: "One" },
+        { value: "two", label: "Two" },
+      ],
+    },
+    {
+      name: "status",
+      type: "select",
+      label: "Status",
+      options: [
+        { value: "", label: "Select Status" },
+        { value: "one", label: "One" },
+        { value: "two", label: "Two" },
+      ],
+    },
+    {
+      name: "pay_as_you_go",
+      type: "input",
+      label: "Pay As You Go (Price)",
+      inputType: "text",
+      placeholder: "Enter",
+      prefix: "$",
+      valueRegex: /^[0-9]+(\.[0-9]{0,2})?$/,
+    },
+    // {
+    //   name: "Tags",
+    //   type: "tags",
+    //   label: "Tags",
+    //   placeholder: "Enter Tags",
+    // },
   ],
 };
 

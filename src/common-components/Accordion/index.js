@@ -19,7 +19,6 @@ const AccordionComponent = ({ list, defaultActiveKey, theme }) => {
               as={Card.Header}
               eventKey={`${i}`}
               onClick={() => {
-                console.log(`${i}`, activeKey.key);
                 setActiveKey({
                   key: `${i}`,
                   prevKey:

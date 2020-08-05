@@ -8,6 +8,11 @@ export const GridCol = styled(Col)`
     padding-left: 24px;
     margin: 0;
   }
+  .form-control:focus,
+  .custom-select:focus {
+    border-color: inherit;
+    box-shadow: none;
+  }
   .form-check-input {
     width: 19px;
     height: 19px;
@@ -30,4 +35,27 @@ export const Label = styled.label`
   line-height: 16px;
   color: #212f4d;
   margin-bottom: 4px;
+`;
+
+export const Group = styled.div`
+  display: flex;
+  flex-direction: column;
+  &.inline,
+  &.inlineHalf {
+    flex-direction: row;
+    align-items: center;
+    & > label {
+      margin-bottom: 0;
+      margin-right: 4px;
+    }
+  }
+  &.inlineHalf {
+    & > * {
+      flex: 1 1 50%;
+    }
+  }
+`;
+
+export const SelectedFile = styled.div`
+  font-size: 12px;
 `;
