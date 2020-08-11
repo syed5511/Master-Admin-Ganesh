@@ -5,9 +5,10 @@ const filters = {
     {
       name: "days",
       type: "select",
+      placeholder: "Days",
+      includeFilter: false,
       col: { xs: 6, sm: 4, md: 2 },
       options: [
-        { value: "", label: "Days" },
         { value: "sunday", label: "Sunday" },
         { value: "monday", label: "Monday" },
       ],
@@ -15,9 +16,10 @@ const filters = {
     {
       name: "kitchen_name",
       type: "select",
+      placeholder: "Kitchen",
+      includeFilter: false,
       col: { xs: 6, sm: 4, md: 2 },
       options: [
-        { value: "", label: "Kitchen" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],
@@ -25,9 +27,10 @@ const filters = {
     {
       name: "item_type",
       type: "select",
+      placeholder: "Item Type",
+      includeFilter: false,
       col: { xs: 6, sm: 4, md: 2 },
       options: [
-        { value: "", label: "Item Type" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],

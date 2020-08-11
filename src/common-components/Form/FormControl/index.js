@@ -1,15 +1,10 @@
 import React from "react";
 import { shape, string, bool } from "prop-types";
-import BForm from "react-bootstrap/Form";
 
 import Field from "./Field";
-import { GridCol, Label, Group } from "./styles";
+import { GridCol, Label, Group, Error } from "./styles";
 
-const {
-  Control: { Feedback },
-} = BForm;
-
-const FormControl = ({ col, label, inline, inlineHalf, ...rest }) => {
+const FormControl = ({ col, label, inline, inlineHalf, error, ...rest }) => {
   const className = [];
   if (inlineHalf) {
     className.push("inlineHalf");
@@ -23,7 +18,7 @@ const FormControl = ({ col, label, inline, inlineHalf, ...rest }) => {
         {label && <Label>{label}</Label>}
         <Field {...rest} />
       </Group>
-      <Feedback type="invalid">{rest.name} is required</Feedback>
+      {error && <Error>{error}</Error>}
     </GridCol>
   );
 };
@@ -33,6 +28,7 @@ FormControl.propTypes = {
   label: string,
   inline: bool,
   inlineHalf: bool,
+  error: string,
 };
 
 FormControl.defaultProps = {
@@ -40,6 +36,7 @@ FormControl.defaultProps = {
   label: null,
   inline: false,
   inlineHalf: false,
+  error: undefined,
 };
 
 export default FormControl;

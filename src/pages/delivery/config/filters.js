@@ -5,9 +5,10 @@ const filters = {
     {
       name: "state",
       type: "select",
+      placeholder: "State",
+      includeFilter: false,
       col: { xs: 6, sm: 4, md: 2 },
       options: [
-        { value: "", label: "State" },
         { value: "illinios", label: "Illinios" },
         { value: "albama", label: "Albama" },
       ],
@@ -15,9 +16,10 @@ const filters = {
     {
       name: "kitchen_name",
       type: "select",
+      placeholder: "Kitchen",
+      includeFilter: false,
       col: { xs: 6, sm: 4, md: 2 },
       options: [
-        { value: "", label: "Kitchen" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],

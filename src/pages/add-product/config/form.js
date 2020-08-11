@@ -31,7 +31,6 @@ const form = {
       name: "item_name",
       type: "input",
       label: "Item Name",
-      required: true,
       inputType: "text",
       placeholder: "Enter Item Name",
     },

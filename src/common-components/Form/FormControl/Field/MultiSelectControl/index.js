@@ -1,9 +1,10 @@
 import React from "react";
-
-import { SelectAllCover, Li } from "./styles";
+import { string, shape, func, arrayOf, bool } from "prop-types";
 import { Picky } from "react-picky";
 import "react-picky/dist/picky.css";
 import Form from "react-bootstrap/Form";
+
+import { SelectAllCover, Li } from "./styles";
 const { Check } = Form;
 
 const MultiSelectControl = ({
@@ -12,8 +13,10 @@ const MultiSelectControl = ({
   setValues,
   options,
   disabled,
-  required,
   multiple,
+  placeholder,
+  includeSelectAll,
+  includeFilter,
 }) => {
   return (
     <Picky
@@ -21,11 +24,11 @@ const MultiSelectControl = ({
       value={values[name] || (multiple && []) || null}
       multiple={multiple}
       disabled={disabled}
-      required={required}
       labelKey="label"
       valueKey="value"
-      includeSelectAll={true}
-      includeFilter={true}
+      includeSelectAll={includeSelectAll}
+      includeFilter={includeFilter}
+      placeholder={placeholder}
       onChange={(v) => {
         setValues({
           ...values,
@@ -81,6 +84,30 @@ const MultiSelectControl = ({
       }}
     />
   );
+};
+
+MultiSelectControl.propTypes = {
+  name: string.isRequired,
+  values: shape({}),
+  setValues: func,
+  options: arrayOf(shape({})),
+  disabled: bool,
+  multiple: bool,
+  placeholder: string,
+  includeSelectAll: bool,
+  includeFilter: bool,
+};
+
+MultiSelectControl.defaultProps = {
+  name: null,
+  values: {},
+  setValues: null,
+  options: [],
+  disabled: false,
+  multiple: false,
+  includeSelectAll: true,
+  includeFilter: true,
+  placeholder: "Select",
 };
 
 export default MultiSelectControl;

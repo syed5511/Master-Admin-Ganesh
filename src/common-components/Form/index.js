@@ -20,12 +20,13 @@ const Form = ({
   onEdit,
   onCancel,
   onSubmit,
+  onValidate,
 }) => {
   const { title, controls, getValuesOn = [], showActions = true } = form;
   const [mounted, setMounted] = useState(false);
-  const [validated, setValidated] = useState(false);
   const initialValues = getInitialValues(controls);
   const [values, setValues] = useState(initialValues);
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     if (mounted && getValuesOn.indexOf("change") !== -1) {
@@ -43,22 +44,25 @@ const Form = ({
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    console.log("form.checkValidity()", form.checkValidity());
-    if (form.checkValidity() === false) {
+    if (onValidate) {
       e.stopPropagation();
-      onSubmit(null);
-      return;
+      const _errors = onValidate(values);
+      console.log("error, ", _errors);
+      if (_errors) {
+        setErrors(_errors);
+        return;
+      } else {
+        onSubmit(values);
+      }
+    } else {
+      onSubmit(values);
     }
-
-    setValidated(true);
-    onSubmit(values);
   };
 
   return (
     <Container>
       {title && <FormTitle>{title}</FormTitle>}
-      <FormContainer onSubmit={onFormSubmit} noValidate validated={validated}>
+      <FormContainer onSubmit={onFormSubmit} noValidate>
         <GridRow>
           {controls.map((item) => (
             <FormControl
@@ -67,6 +71,7 @@ const Form = ({
               mode={mode}
               values={values}
               setValues={setValues}
+              error={errors[item.name]}
             />
           ))}
         </GridRow>
@@ -101,14 +106,16 @@ Form.propTypes = {
   onEdit: func,
   onCancel: func,
   onSubmit: func,
+  onValidate: func,
 };
 
 Form.defaultProps = {
   formValues: {},
   mode: "edit",
-  onEdit: () => {},
-  onCancel: () => {},
-  onSubmit: () => {},
+  onEdit: null,
+  onCancel: null,
+  onSubmit: null,
+  onValidate: null,
 };
 
 export default Form;

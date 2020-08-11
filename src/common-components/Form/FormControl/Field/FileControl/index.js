@@ -11,7 +11,6 @@ const FormControl = ({
   placeholder,
   values,
   disabled,
-  required,
   setValues,
   fileButtonText,
   ...rest
@@ -22,7 +21,6 @@ const FormControl = ({
       label={placeholder}
       data-browse={fileButtonText}
       disabled={disabled}
-      required={required}
       onChange={(e) => {
         setValues({ ...values, [name]: [...e.target.files] });
       }}
@@ -37,7 +35,6 @@ const FormControl = ({
 );
 
 FormControl.propTypes = {
-  required: bool,
   name: string.isRequired,
   placeholder: string,
   values: shape({}).isRequired,
@@ -49,7 +46,6 @@ FormControl.propTypes = {
 FormControl.defaultProps = {
   placeholder: "Select file",
   disabled: false,
-  required: false,
   fileButtonText: "Browse",
 };
 

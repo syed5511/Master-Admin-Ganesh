@@ -11,7 +11,6 @@ const AddProductPage = () => {
   const [mode, setMode] = useState("edit");
 
   const onFormChange = (v) => {
-    console.log(v, "v");
     if (v.product_image !== selectedImage) {
       setSelectedImage(v.product_image);
       loadImage(
@@ -23,7 +22,16 @@ const AddProductPage = () => {
 
   const onSubmit = (values) => {
     console.log("form values", values);
-    setMode("preview");
+    // setMode("preview");
+  };
+
+  const onValidate = (values) => {
+    console.log("values validate", values);
+    const errors = {};
+    if (!values.kitchen_name) {
+      errors.kitchen_name = "Kitchen name is required";
+    }
+    return errors;
   };
 
   return (
@@ -35,9 +43,10 @@ const AddProductPage = () => {
             getValues={onFormChange}
             onSubmit={onSubmit}
             mode={mode}
-            onEdit={() => {
-              setMode("edit");
-            }}
+            // onEdit={() => {
+            //   setMode("edit");
+            // }}
+            onValidate={onValidate}
           />
         </Col>
         <Col xs={12} sm={12} md={4}>

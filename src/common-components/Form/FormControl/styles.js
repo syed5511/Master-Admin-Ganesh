@@ -59,3 +59,8 @@ export const Group = styled.div`
 export const SelectedFile = styled.div`
   font-size: 12px;
 `;
+
+export const Error = styled.div`
+  color: red;
+  font-size: 12px;
+`;

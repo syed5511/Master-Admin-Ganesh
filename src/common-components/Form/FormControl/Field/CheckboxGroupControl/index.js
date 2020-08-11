@@ -7,7 +7,6 @@ const CheckboxGroupControl = ({
   name,
   values,
   disabled,
-  required,
   setValues,
   options,
   ...rest
@@ -20,7 +19,6 @@ const CheckboxGroupControl = ({
         type="checkbox"
         label={option.label}
         id={option.id || option.label}
-        required={required}
         checked={(values[name] || []).indexOf(option.value) > -1}
         onChange={(e) => {
           if (e.target.checked) {
@@ -45,7 +43,6 @@ const CheckboxGroupControl = ({
 );
 
 CheckboxGroupControl.propTypes = {
-  required: bool,
   name: string.isRequired,
   values: shape({}).isRequired,
   setValues: func.isRequired,
@@ -54,7 +51,6 @@ CheckboxGroupControl.propTypes = {
 
 CheckboxGroupControl.defaultProps = {
   disabled: false,
-  required: false,
 };
 
 export default CheckboxGroupControl;
