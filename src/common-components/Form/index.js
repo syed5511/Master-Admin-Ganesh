@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { shape, func, string } from "prop-types";
+import { shape, func, string, node } from "prop-types";
 
 import FormControl from "./FormControl";
 import Button from "../Button";
@@ -21,6 +21,7 @@ const Form = ({
   onCancel,
   onSubmit,
   onValidate,
+  children,
 }) => {
   const { title, controls, getValuesOn = [], showActions = true } = form;
   const [mounted, setMounted] = useState(false);
@@ -72,8 +73,10 @@ const Form = ({
               values={values}
               setValues={setValues}
               error={errors[item.name]}
+              setErrors={setErrors}
             />
           ))}
+          {children}
         </GridRow>
         {showActions && (
           <Actions>
@@ -107,6 +110,7 @@ Form.propTypes = {
   onCancel: func,
   onSubmit: func,
   onValidate: func,
+  children: node,
 };
 
 Form.defaultProps = {
@@ -116,6 +120,7 @@ Form.defaultProps = {
   onCancel: null,
   onSubmit: null,
   onValidate: null,
+  children: null,
 };
 
 export default Form;

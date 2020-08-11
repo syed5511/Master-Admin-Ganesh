@@ -13,6 +13,7 @@ const FormControl = ({
   disabled,
   setValues,
   fileButtonText,
+  setErrors,
   ...rest
 }) => (
   <>
@@ -22,6 +23,9 @@ const FormControl = ({
       data-browse={fileButtonText}
       disabled={disabled}
       onChange={(e) => {
+        setErrors({
+          [name]: null,
+        });
         setValues({ ...values, [name]: [...e.target.files] });
       }}
       // value={values[name]}

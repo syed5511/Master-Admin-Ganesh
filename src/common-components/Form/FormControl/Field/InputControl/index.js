@@ -14,6 +14,7 @@ const InputControl = ({
   setValues,
   prefix,
   valueRegex,
+  setErrors,
 }) => {
   const renderInputControl = () => (
     <Control
@@ -28,6 +29,9 @@ const InputControl = ({
             (val.match(valueRegex) || [])[0] ||
             (!val ? "" : values[name] || "");
         }
+        setErrors({
+          [name]: null,
+        });
         setValues({
           ...values,
           [name]: val,

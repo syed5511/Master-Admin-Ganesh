@@ -9,6 +9,7 @@ const TextAreaControl = ({
   placeholder,
   disabled,
   setValues,
+  setErrors,
 }) => (
   <Control
     name={name}
@@ -16,6 +17,9 @@ const TextAreaControl = ({
     placeholder={placeholder}
     disabled={disabled}
     onChange={(e) => {
+      setErrors({
+        [name]: null,
+      });
       setValues({ ...values, [name]: e.target.value });
     }}
     value={values[name]}

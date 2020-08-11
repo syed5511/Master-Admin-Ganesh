@@ -9,6 +9,7 @@ const CheckboxGroupControl = ({
   disabled,
   setValues,
   options,
+  setErrors,
   ...rest
 }) => (
   <>
@@ -34,6 +35,9 @@ const CheckboxGroupControl = ({
               ),
             });
           }
+          setErrors({
+            [name]: null,
+          });
         }}
         value={option.value}
         {...rest}

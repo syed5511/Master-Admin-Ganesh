@@ -29,38 +29,37 @@ export const Ul = styled.ul`
   &.focus {
     border: 2px #ff5016 solid;
   }
-  &.error {
-    border: 1px solid #ff0000;
-  }
 `;
 
 export const Info = styled.p`
   margin: 0;
   margin-top: 8px;
-  fontw-size: 12px;
+  font-size: 12px;
   color: #9b9b9b;
   span {
     color: #333;
     font-weight: bold;
   }
-  &.error {
-    color: #ff0000;
-    span {
-      color: #ff0000;
-    }
-  }
 `;
 
 export const Li = styled.li`
-  background-color: #efefef;
   color: #000;
-  border: 1px solid #efefef;
+  border: 1px solid #ccc7c7;
   border-radius: 4px;
   display: flex;
   padding: 2px 6px;
   margin-bottom: 4px;
   margin-right: 4px;
   align-items: center;
+  font-size: 14px;
+  span {
+    margin-left: 8px;
+    cursor: pointer;
+  }
+  &.duplicate {
+    border: 1px solid red;
+    color: red;
+  }
   svg {
     cursor: pointer;
     margin-left: 4px;

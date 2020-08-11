@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { func, string, arrayOf, shape, bool } from "prop-types";
+import { func, string, arrayOf, shape } from "prop-types";
 
 import { Container, Ul, Li, Info, LI } from "./styles";
 
@@ -7,8 +7,6 @@ const InputTag = ({
   onChange,
   value,
   placeholder,
-  message,
-  isSimple,
   eventKey,
   disabled,
   eventKeyName,
@@ -27,27 +25,22 @@ const InputTag = ({
   if (focus) {
     ulClass.push("focus");
   }
-  if (message) {
-    ulClass.push("error");
-  }
 
   const inputKeyDown = (e) => {
     const val = e.target.value;
     if (e.key === eventKey && val) {
-      if (
-        tags.find((tag) =>
-          isSimple
-            ? tag.toLowerCase() === val.toLowerCase()
-            : tag.value.toLowerCase() === val.toLowerCase()
-        )
-      ) {
-        return;
-      }
-      if (isSimple) {
-        onChange([...tags, val]);
-      } else {
-        onChange([...tags, { label: val, value: val }]);
-      }
+      e.preventDefault();
+      onChange([
+        ...tags,
+        {
+          label: val,
+          value: val,
+          duplicate:
+            tags
+              .map((item) => item.value.toLowerCase())
+              .indexOf(val.toLowerCase()) > -1,
+        },
+      ]);
       inputRef.current.value = null;
     } else if (e.key === "Backspace" && !val) {
       removeTag(tags.length - 1);
@@ -58,9 +51,12 @@ const InputTag = ({
     <Container>
       <Ul className={focus ? "focus" : ""}>
         {tags.map((tag, i) => (
-          <Li key={`${isSimple ? tag : tag.value}_${i}`}>
-            {isSimple ? tag : tag.label}
-            <span onClick={() => removeTag(i)}>x</span>
+          <Li
+            key={`${tag.value}_${i}`}
+            className={tag.duplicate ? "duplicate" : ""}
+          >
+            {tag.label}
+            <span onClick={() => removeTag(i)}>X</span>
           </Li>
         ))}
         <LI>
@@ -76,12 +72,8 @@ const InputTag = ({
           />
         </LI>
       </Ul>
-      <Info className={message ? "error" : ""}>
-        {message || (
-          <>
-            Press <span>{eventKeyName}</span> key to add value(s).
-          </>
-        )}
+      <Info>
+        Press <span>{eventKeyName}</span> key to add value(s).
       </Info>
     </Container>
   );
@@ -91,16 +83,12 @@ InputTag.propTypes = {
   onChange: func.isRequired,
   value: arrayOf(shape({})).isRequired,
   placeholder: string,
-  message: string,
-  isSimple: bool,
   eventKey: string,
   eventKeyName: string,
 };
 
 InputTag.defaultProps = {
   placeholder: "Select..",
-  message: undefined,
-  isSimple: false,
   eventKey: "Enter",
   eventKeyName: "Enter",
 };

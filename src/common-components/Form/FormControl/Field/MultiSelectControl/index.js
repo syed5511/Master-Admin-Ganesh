@@ -17,6 +17,7 @@ const MultiSelectControl = ({
   placeholder,
   includeSelectAll,
   includeFilter,
+  setErrors,
 }) => {
   return (
     <Picky
@@ -30,6 +31,9 @@ const MultiSelectControl = ({
       includeFilter={includeFilter}
       placeholder={placeholder}
       onChange={(v) => {
+        setErrors({
+          [name]: null,
+        });
         setValues({
           ...values,
           [name]: v,
@@ -96,6 +100,7 @@ MultiSelectControl.propTypes = {
   placeholder: string,
   includeSelectAll: bool,
   includeFilter: bool,
+  setErrors: func,
 };
 
 MultiSelectControl.defaultProps = {
@@ -107,6 +112,7 @@ MultiSelectControl.defaultProps = {
   multiple: false,
   includeSelectAll: true,
   includeFilter: true,
+  setErrors: () => {},
   placeholder: "Select",
 };
 
