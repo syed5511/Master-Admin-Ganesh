@@ -14,7 +14,6 @@ const form = {
       type: "select",
       label: "Kitchen Name",
       options: [
-        { value: "", label: "Select Kitchen" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],
@@ -24,7 +23,6 @@ const form = {
       type: "select",
       label: "Item Type",
       options: [
-        { value: "", label: "Select Item Type" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],
@@ -38,15 +36,12 @@ const form = {
       placeholder: "Enter Item Name",
     },
     {
-      name: "serving_temperature",
+      name: "serving_temperature-select",
       type: "multi-select",
       label: "Serving Temperature",
       col: { xs: 12, sm: 6, md: 6 },
+      multiple: true,
       options: [
-        {
-          label: "Select",
-          value: "",
-        },
         {
           label: "30 C",
           value: "30_c",
@@ -94,7 +89,6 @@ const form = {
       type: "select",
       label: "Special Marketing",
       options: [
-        { value: "", label: "Select" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],
@@ -104,7 +98,6 @@ const form = {
       type: "select",
       label: "Allergic Ingredients",
       options: [
-        { value: "", label: "Select" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],
@@ -121,7 +114,6 @@ const form = {
       type: "select",
       label: "Chef Name",
       options: [
-        { value: "", label: "Select" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],
@@ -131,7 +123,6 @@ const form = {
       type: "select",
       label: "Cuisine type",
       options: [
-        { value: "", label: "Select" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],
@@ -141,7 +132,6 @@ const form = {
       type: "select",
       label: "Status",
       options: [
-        { value: "", label: "Select Status" },
         { value: "one", label: "One" },
         { value: "two", label: "Two" },
       ],
@@ -155,12 +145,6 @@ const form = {
       prefix: "$",
       valueRegex: /^[0-9]+(\.[0-9]{0,2})?$/,
     },
-    // {
-    //   name: "Tags",
-    //   type: "tags",
-    //   label: "Tags",
-    //   placeholder: "Enter Tags",
-    // },
   ],
 };
 

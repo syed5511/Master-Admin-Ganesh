@@ -12,7 +12,7 @@ import CheckboxGroupControl from "./CheckboxGroupControl";
 
 const Field = ({ type, mode, ...rest }) => {
   if (mode === "preview") {
-    return <StaticControl {...rest} />;
+    return <StaticControl {...rest} type={type} />;
   }
   switch (type) {
     case "input":
@@ -24,7 +24,6 @@ const Field = ({ type, mode, ...rest }) => {
     case "file":
       return <FileControl {...rest} />;
     case "select":
-      return <SelectControl {...rest} />;
     case "multi-select":
       return <MultiSelectControl {...rest} />;
     case "checkbox-group":
