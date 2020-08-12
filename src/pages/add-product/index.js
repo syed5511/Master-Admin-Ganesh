@@ -21,12 +21,12 @@ const AddProductPage = () => {
   };
 
   const onSubmit = (values) => {
-    console.log("form values", values);
+    // console.log("form values", values);
     // setMode("preview");
   };
 
   const onValidate = (values) => {
-    console.log("values validate", values);
+    // console.log("values validate", values);
     const errors = {};
     if (!values.kitchen_name) {
       errors.kitchen_name = "Kitchen name is required";

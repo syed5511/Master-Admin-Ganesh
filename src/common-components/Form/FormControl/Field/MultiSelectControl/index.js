@@ -4,7 +4,7 @@ import { Picky } from "react-picky";
 import "react-picky/dist/picky.css";
 import Form from "react-bootstrap/Form";
 
-import { SelectAllCover, Li } from "./styles";
+import { Container, SelectAllCover, Li } from "./styles";
 const { Check } = Form;
 
 const MultiSelectControl = ({
@@ -18,75 +18,80 @@ const MultiSelectControl = ({
   includeSelectAll,
   includeFilter,
   setErrors,
+  errors,
+  error,
 }) => {
   return (
-    <Picky
-      options={options}
-      value={values[name] || (multiple && []) || null}
-      multiple={multiple}
-      disabled={disabled}
-      labelKey="label"
-      valueKey="value"
-      includeSelectAll={includeSelectAll}
-      includeFilter={includeFilter}
-      placeholder={placeholder}
-      onChange={(v) => {
-        setErrors({
-          [name]: null,
-        });
-        setValues({
-          ...values,
-          [name]: v,
-        });
-      }}
-      dropdownHeight={600}
-      renderSelectAll={({
-        filtered,
-        tabIndex,
-        allSelected,
-        toggleSelectAll,
-        multiple,
-      }) => {
-        if (multiple && !filtered) {
+    <Container className={error ? "error" : ""}>
+      <Picky
+        options={options}
+        value={values[name] || (multiple && []) || null}
+        multiple={multiple}
+        disabled={disabled}
+        labelKey="label"
+        valueKey="value"
+        includeSelectAll={includeSelectAll}
+        includeFilter={includeFilter}
+        placeholder={placeholder}
+        onChange={(v) => {
+          setErrors({
+            ...errors,
+            [name]: null,
+          });
+          setValues({
+            ...values,
+            [name]: v,
+          });
+        }}
+        dropdownHeight={600}
+        renderSelectAll={({
+          filtered,
+          tabIndex,
+          allSelected,
+          toggleSelectAll,
+          multiple,
+        }) => {
+          if (multiple && !filtered) {
+            return (
+              <SelectAllCover
+                tabIndex={tabIndex}
+                role="option"
+                className={allSelected ? "option selected" : "option"}
+                onClick={toggleSelectAll}
+                onKeyPress={toggleSelectAll}
+              >
+                <span>SELECT ALL</span>
+              </SelectAllCover>
+            );
+          }
+        }}
+        render={({
+          style,
+          isSelected,
+          item,
+          selectValue,
+          labelKey,
+          valueKey,
+          multiple,
+        }) => {
           return (
-            <SelectAllCover
-              tabIndex={tabIndex}
-              role="option"
-              className={allSelected ? "option selected" : "option"}
-              onClick={toggleSelectAll}
-              onKeyPress={toggleSelectAll}
+            <Li
+              style={style}
+              className={isSelected ? "selected" : ""}
+              key={item[valueKey]}
+              onClick={() => selectValue(item)}
             >
-              <span>SELECT ALL</span>
-            </SelectAllCover>
+              <Check
+                checked={isSelected}
+                readOnly
+                type={multiple ? "checkbox" : "radio"}
+              />
+              <span>{item[labelKey]}</span>
+            </Li>
           );
-        }
-      }}
-      render={({
-        style,
-        isSelected,
-        item,
-        selectValue,
-        labelKey,
-        valueKey,
-        multiple,
-      }) => {
-        return (
-          <Li
-            style={style}
-            className={isSelected ? "selected" : ""}
-            key={item[valueKey]}
-            onClick={() => selectValue(item)}
-          >
-            <Check
-              checked={isSelected}
-              readOnly
-              type={multiple ? "checkbox" : "radio"}
-            />
-            <span>{item[labelKey]}</span>
-          </Li>
-        );
-      }}
-    />
+        }}
+      />
+    </Container>
   );
 };
 
@@ -101,6 +106,7 @@ MultiSelectControl.propTypes = {
   includeSelectAll: bool,
   includeFilter: bool,
   setErrors: func,
+  error: string,
 };
 
 MultiSelectControl.defaultProps = {
@@ -114,6 +120,7 @@ MultiSelectControl.defaultProps = {
   includeFilter: true,
   setErrors: () => {},
   placeholder: "Select",
+  error: null,
 };
 
 export default MultiSelectControl;

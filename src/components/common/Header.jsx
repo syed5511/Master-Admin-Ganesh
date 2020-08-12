@@ -17,7 +17,6 @@ const Header = () => {
 
   const handleChange = (e) => {
     history.push(`/${e.value}`);
-    console.log(e.value);
   };
   return (
     <nav className="navbar fixed-top navbar-expand-md">

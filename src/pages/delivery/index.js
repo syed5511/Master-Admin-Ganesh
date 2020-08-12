@@ -18,6 +18,13 @@ const ProductPage = () => {
     show: false,
   });
 
+  const onClose = () => {
+    setShowAddModal({
+      item: null,
+      show: false,
+    });
+  };
+
   return (
     <>
       <TopContainer>
@@ -41,14 +48,9 @@ const ProductPage = () => {
         <Modal
           title="Add Zip Code & Kitchen"
           show={showAddModal.show}
-          onClose={() => {
-            setShowAddModal({
-              item: null,
-              show: false,
-            });
-          }}
+          onClose={onClose}
         >
-          <AddZipCodes data={showAddModal.item} />
+          <AddZipCodes data={showAddModal.item} onCancel={onClose} />
         </Modal>
       )}
     </>

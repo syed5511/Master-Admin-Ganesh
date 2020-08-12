@@ -16,7 +16,7 @@ const FormControl = ({ col, label, inline, inlineHalf, error, ...rest }) => {
     <GridCol xs={12} sm={6} {...col}>
       <Group className={className}>
         {label && <Label>{label}</Label>}
-        <Field {...rest} />
+        <Field {...rest} error={error} />
       </Group>
       {error && <Error>{error}</Error>}
     </GridCol>

@@ -20,14 +20,17 @@ export const Ul = styled.ul`
   border-radius: 4px;
   padding: 4px;
   border: 1px solid #c2c2c2;
-  min-height: 48px;
+  min-height: 38px;
   align-items: center;
   background-color: #fff;
   &:hover {
-    border: 1px #ff5016 solid;
+    border: 1px #161a34 solid;
   }
   &.focus {
-    border: 2px #ff5016 solid;
+    border: 1px #161a34 solid;
+  }
+  &.error {
+    border: 1px solid red;
   }
 `;
 

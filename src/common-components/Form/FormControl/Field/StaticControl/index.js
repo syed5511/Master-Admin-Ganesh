@@ -3,7 +3,6 @@ import React from "react";
 import { Value } from "./styles";
 
 const StaticControl = ({ name, values, type }) => {
-  console.log("name", name, values, type);
   if (type === "file") {
     return (
       <Value>{(values[name] || []).map((item) => item.name).join(", ")}</Value>

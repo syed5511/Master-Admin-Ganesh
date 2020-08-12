@@ -48,7 +48,6 @@ const Form = ({
     if (onValidate) {
       e.stopPropagation();
       const _errors = onValidate(values);
-      console.log("error, ", _errors);
       if (_errors) {
         setErrors(_errors);
         return;
@@ -74,6 +73,7 @@ const Form = ({
               setValues={setValues}
               error={errors[item.name]}
               setErrors={setErrors}
+              errors={errors}
             />
           ))}
           {children}

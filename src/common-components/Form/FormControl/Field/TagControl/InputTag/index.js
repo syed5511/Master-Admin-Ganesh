@@ -11,6 +11,7 @@ const InputTag = ({
   disabled,
   eventKeyName,
   name,
+  error,
 }) => {
   const [focus, setFocus] = useState(false);
   const inputRef = useRef(null);
@@ -24,6 +25,9 @@ const InputTag = ({
   const ulClass = [];
   if (focus) {
     ulClass.push("focus");
+  }
+  if (error) {
+    ulClass.push("error");
   }
 
   const inputKeyDown = (e) => {
@@ -49,7 +53,7 @@ const InputTag = ({
 
   return (
     <Container>
-      <Ul className={focus ? "focus" : ""}>
+      <Ul className={ulClass}>
         {tags.map((tag, i) => (
           <Li
             key={`${tag.value}_${i}`}
@@ -85,12 +89,14 @@ InputTag.propTypes = {
   placeholder: string,
   eventKey: string,
   eventKeyName: string,
+  error: string,
 };
 
 InputTag.defaultProps = {
   placeholder: "Select..",
   eventKey: "Enter",
   eventKeyName: "Enter",
+  error: null,
 };
 
 export default InputTag;

@@ -1,6 +1,9 @@
 import React from "react";
 import { string, shape, func, bool } from "prop-types";
 import Form from "react-bootstrap/Form";
+
+import { ControlContainer } from "../../styles";
+
 const { Control } = Form;
 
 const TextAreaControl = ({
@@ -10,20 +13,25 @@ const TextAreaControl = ({
   disabled,
   setValues,
   setErrors,
+  error,
+  errors,
 }) => (
-  <Control
-    name={name}
-    as="textarea"
-    placeholder={placeholder}
-    disabled={disabled}
-    onChange={(e) => {
-      setErrors({
-        [name]: null,
-      });
-      setValues({ ...values, [name]: e.target.value });
-    }}
-    value={values[name]}
-  />
+  <ControlContainer className={error ? "error" : ""}>
+    <Control
+      name={name}
+      as="textarea"
+      placeholder={placeholder}
+      disabled={disabled}
+      onChange={(e) => {
+        setErrors({
+          ...errors,
+          [name]: null,
+        });
+        setValues({ ...values, [name]: e.target.value });
+      }}
+      value={values[name]}
+    />
+  </ControlContainer>
 );
 
 TextAreaControl.propTypes = {
@@ -32,10 +40,12 @@ TextAreaControl.propTypes = {
   values: shape({}).isRequired,
   setValues: func.isRequired,
   disabled: bool,
+  error: string,
 };
 
 TextAreaControl.defaultProps = {
   disabled: false,
+  error: null,
 };
 
 export default TextAreaControl;

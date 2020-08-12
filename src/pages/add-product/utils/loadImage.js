@@ -1,5 +1,5 @@
 const loadImage = (input, selector) => {
-  console.log(input, selector);
+  // console.log(input, selector);
   if (input.files && input.files[0]) {
     var reader = new FileReader();
 

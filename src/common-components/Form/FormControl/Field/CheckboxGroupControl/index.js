@@ -1,6 +1,9 @@
 import React from "react";
 import { string, shape, func, bool } from "prop-types";
 import Form from "react-bootstrap/Form";
+
+import { ControlContainer } from "../../styles";
+
 const { Check } = Form;
 
 const CheckboxGroupControl = ({
@@ -10,9 +13,11 @@ const CheckboxGroupControl = ({
   setValues,
   options,
   setErrors,
+  error,
+  errors,
   ...rest
 }) => (
-  <>
+  <ControlContainer className={error ? "error" : ""}>
     {options.map((option) => (
       <Check
         key={option.label}
@@ -36,6 +41,7 @@ const CheckboxGroupControl = ({
             });
           }
           setErrors({
+            ...errors,
             [name]: null,
           });
         }}
@@ -43,7 +49,7 @@ const CheckboxGroupControl = ({
         {...rest}
       />
     ))}
-  </>
+  </ControlContainer>
 );
 
 CheckboxGroupControl.propTypes = {

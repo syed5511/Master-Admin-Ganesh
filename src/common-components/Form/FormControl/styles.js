@@ -64,3 +64,12 @@ export const Error = styled.div`
   color: red;
   font-size: 12px;
 `;
+
+export const ControlContainer = styled.div`
+  width: 100%;
+  &.error {
+    .form-control {
+      border: 1px solid red;
+    }
+  }
+`;
