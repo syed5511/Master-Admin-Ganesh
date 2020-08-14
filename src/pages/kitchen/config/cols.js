@@ -4,13 +4,22 @@ import {
   Name,
   Status,
 } from "../../../common-components/common/table-items-style";
+import history from "../../../history";
 
 const cols = [
   {
     key: "kitchen_name",
     heading: "Kitchen Name",
     type: "render",
-    render: (r) => <Name>{r.kitchen_name}</Name>,
+    render: (r) => (
+      <Name
+        onClick={() => {
+          history.push("/kitchen/kitchen-details");
+        }}
+      >
+        {r.kitchen_name}
+      </Name>
+    ),
   },
   {
     key: "state",

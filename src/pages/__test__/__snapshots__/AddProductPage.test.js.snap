@@ -1,0 +1,837 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Product page snapshot 1`] = `
+Array [
+  <nav
+    aria-label="breadcrumb"
+    className="sc-fzoXzr fmnvAV"
+  >
+    <ol
+      className="breadcrumb"
+    >
+      <li
+        className="breadcrumb-item sc-fzpjYC gFDuOD"
+      >
+        <a
+          href="/products"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Products
+        </a>
+      </li>
+      <li
+        aria-current="page"
+        className="breadcrumb-item sc-fzpjYC gFDuOD active"
+      >
+        Add Product
+      </li>
+    </ol>
+  </nav>,
+  <div
+    className="sc-fznxsB fLycgO row"
+  >
+    <div
+      className="sc-fznJRM hnBZhE form-container col-md-8 col-sm-12 col-12"
+    >
+      <div
+        className="sc-fzokOt gcdrkZ"
+      >
+        <form
+          className="sc-fzoyAV lgNqAT"
+          noValidate={true}
+          onSubmit={[Function]}
+        >
+          <div
+            className="sc-fzqNJr hJmrOs row"
+          >
+            <div
+              className="sc-AxjAm dnapkf col-md-12 col-sm-12 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU inline"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Product ID
+                </label>
+                <div
+                  className="sc-fzozJi dByucJ"
+                >
+                  1234567890AM
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Kitchen Name
+                </label>
+                <div
+                  className="sc-AxheI cMxSnL"
+                >
+                  <div
+                    aria-controls="picky__button"
+                    aria-owns=""
+                    className="picky "
+                    id="picky"
+                    role="combobox"
+                    tabIndex={0}
+                  >
+                    <button
+                      className="picky__input  "
+                      data-testid="picky-input"
+                      disabled={false}
+                      id="picky__button__button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        className="picky__placeholder"
+                        data-testid="picky_placeholder"
+                      >
+                        Select
+                      </span>
+                    </button>
+                    <div
+                      aria-hidden={true}
+                      className="picky__dropdown"
+                      hidden={true}
+                      id="picky-list"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      <div
+                        className="picky__filter"
+                      >
+                        <input
+                          aria-label="filter options"
+                          className="picky__filter__input"
+                          data-testid="picky__filter__input"
+                          onChange={[Function]}
+                          placeholder="Filter..."
+                          tabIndex={0}
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Item Type
+                </label>
+                <div
+                  className="sc-AxheI cMxSnL"
+                >
+                  <div
+                    aria-controls="picky__button"
+                    aria-owns=""
+                    className="picky "
+                    id="picky"
+                    role="combobox"
+                    tabIndex={0}
+                  >
+                    <button
+                      className="picky__input  "
+                      data-testid="picky-input"
+                      disabled={false}
+                      id="picky__button__button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        className="picky__placeholder"
+                        data-testid="picky_placeholder"
+                      >
+                        Select
+                      </span>
+                    </button>
+                    <div
+                      aria-hidden={true}
+                      className="picky__dropdown"
+                      hidden={true}
+                      id="picky-list"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      <div
+                        className="picky__filter"
+                      >
+                        <input
+                          aria-label="filter options"
+                          className="picky__filter__input"
+                          data-testid="picky__filter__input"
+                          onChange={[Function]}
+                          placeholder="Filter..."
+                          tabIndex={0}
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Item Name
+                </label>
+                <div
+                  className="sc-AxgMl clvHkE"
+                >
+                  <input
+                    className="form-control"
+                    disabled={false}
+                    name="item_name"
+                    onChange={[Function]}
+                    placeholder="Enter Item Name"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-md-6 col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Serving Temperature
+                </label>
+                <div
+                  className="sc-AxheI cMxSnL"
+                >
+                  <div
+                    aria-controls="picky__button"
+                    aria-owns=""
+                    className="picky "
+                    id="picky"
+                    role="combobox"
+                    tabIndex={0}
+                  >
+                    <button
+                      className="picky__input  "
+                      data-testid="picky-input"
+                      disabled={false}
+                      id="picky__button__button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        className="picky__placeholder"
+                        data-testid="picky_placeholder"
+                      >
+                        Select
+                      </span>
+                    </button>
+                    <div
+                      aria-hidden={true}
+                      className="picky__dropdown"
+                      hidden={true}
+                      id="picky-list"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      <div
+                        className="picky__filter"
+                      >
+                        <input
+                          aria-label="filter options"
+                          className="picky__filter__input"
+                          data-testid="picky__filter__input"
+                          onChange={[Function]}
+                          placeholder="Filter..."
+                          tabIndex={0}
+                          type="text"
+                        />
+                      </div>
+                      <div
+                        className="sc-AxmLO cAKCgh option selected"
+                        onClick={[Function]}
+                        onKeyPress={[Function]}
+                        role="option"
+                        tabIndex={0}
+                      >
+                        <span>
+                          SELECT ALL
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Ingredients
+                </label>
+                <div
+                  className="sc-AxgMl clvHkE"
+                >
+                  <textarea
+                    className="form-control"
+                    disabled={false}
+                    name="ingredients"
+                    onChange={[Function]}
+                    placeholder="Enter Ingredients"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Recipe With
+                </label>
+                <div
+                  className="sc-AxgMl clvHkE"
+                >
+                  <textarea
+                    className="form-control"
+                    disabled={false}
+                    name="recipe_with"
+                    onChange={[Function]}
+                    placeholder="Enter Recipe With"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-md-3 col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Size Single Person
+                </label>
+                <div
+                  className="sc-AxgMl clvHkE"
+                >
+                  <input
+                    className="form-control"
+                    disabled={false}
+                    name="size_single_person"
+                    onChange={[Function]}
+                    placeholder="Enter"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-md-3 col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Size Double Person
+                </label>
+                <div
+                  className="sc-AxgMl clvHkE"
+                >
+                  <input
+                    className="form-control"
+                    disabled={false}
+                    name="size_double_person"
+                    onChange={[Function]}
+                    placeholder="Enter"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Special Marketing
+                </label>
+                <div
+                  className="sc-AxheI cMxSnL"
+                >
+                  <div
+                    aria-controls="picky__button"
+                    aria-owns=""
+                    className="picky "
+                    id="picky"
+                    role="combobox"
+                    tabIndex={0}
+                  >
+                    <button
+                      className="picky__input  "
+                      data-testid="picky-input"
+                      disabled={false}
+                      id="picky__button__button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        className="picky__placeholder"
+                        data-testid="picky_placeholder"
+                      >
+                        Select
+                      </span>
+                    </button>
+                    <div
+                      aria-hidden={true}
+                      className="picky__dropdown"
+                      hidden={true}
+                      id="picky-list"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      <div
+                        className="picky__filter"
+                      >
+                        <input
+                          aria-label="filter options"
+                          className="picky__filter__input"
+                          data-testid="picky__filter__input"
+                          onChange={[Function]}
+                          placeholder="Filter..."
+                          tabIndex={0}
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Allergic Ingredients
+                </label>
+                <div
+                  className="sc-AxheI cMxSnL"
+                >
+                  <div
+                    aria-controls="picky__button"
+                    aria-owns=""
+                    className="picky "
+                    id="picky"
+                    role="combobox"
+                    tabIndex={0}
+                  >
+                    <button
+                      className="picky__input  "
+                      data-testid="picky-input"
+                      disabled={false}
+                      id="picky__button__button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        className="picky__placeholder"
+                        data-testid="picky_placeholder"
+                      >
+                        Select
+                      </span>
+                    </button>
+                    <div
+                      aria-hidden={true}
+                      className="picky__dropdown"
+                      hidden={true}
+                      id="picky-list"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      <div
+                        className="picky__filter"
+                      >
+                        <input
+                          aria-label="filter options"
+                          className="picky__filter__input"
+                          data-testid="picky__filter__input"
+                          onChange={[Function]}
+                          placeholder="Filter..."
+                          tabIndex={0}
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Upload Image
+                </label>
+                <div
+                  className="sc-AxgMl clvHkE"
+                >
+                  <div
+                    className="custom custom-file"
+                  >
+                    <input
+                      className="custom-file-input"
+                      disabled={false}
+                      id="product_image"
+                      name="product_image"
+                      onChange={[Function]}
+                      type="file"
+                    />
+                    <label
+                      className="custom-file-label"
+                      data-browse="Browse"
+                      htmlFor="product_image"
+                    >
+                      Attach File
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Chef Name
+                </label>
+                <div
+                  className="sc-AxheI cMxSnL"
+                >
+                  <div
+                    aria-controls="picky__button"
+                    aria-owns=""
+                    className="picky "
+                    id="picky"
+                    role="combobox"
+                    tabIndex={0}
+                  >
+                    <button
+                      className="picky__input  "
+                      data-testid="picky-input"
+                      disabled={false}
+                      id="picky__button__button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        className="picky__placeholder"
+                        data-testid="picky_placeholder"
+                      >
+                        Select
+                      </span>
+                    </button>
+                    <div
+                      aria-hidden={true}
+                      className="picky__dropdown"
+                      hidden={true}
+                      id="picky-list"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      <div
+                        className="picky__filter"
+                      >
+                        <input
+                          aria-label="filter options"
+                          className="picky__filter__input"
+                          data-testid="picky__filter__input"
+                          onChange={[Function]}
+                          placeholder="Filter..."
+                          tabIndex={0}
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Cuisine type
+                </label>
+                <div
+                  className="sc-AxheI cMxSnL"
+                >
+                  <div
+                    aria-controls="picky__button"
+                    aria-owns=""
+                    className="picky "
+                    id="picky"
+                    role="combobox"
+                    tabIndex={0}
+                  >
+                    <button
+                      className="picky__input  "
+                      data-testid="picky-input"
+                      disabled={false}
+                      id="picky__button__button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        className="picky__placeholder"
+                        data-testid="picky_placeholder"
+                      >
+                        Select
+                      </span>
+                    </button>
+                    <div
+                      aria-hidden={true}
+                      className="picky__dropdown"
+                      hidden={true}
+                      id="picky-list"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      <div
+                        className="picky__filter"
+                      >
+                        <input
+                          aria-label="filter options"
+                          className="picky__filter__input"
+                          data-testid="picky__filter__input"
+                          onChange={[Function]}
+                          placeholder="Filter..."
+                          tabIndex={0}
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Status
+                </label>
+                <div
+                  className="sc-AxheI cMxSnL"
+                >
+                  <div
+                    aria-controls="picky__button"
+                    aria-owns=""
+                    className="picky "
+                    id="picky"
+                    role="combobox"
+                    tabIndex={0}
+                  >
+                    <button
+                      className="picky__input  "
+                      data-testid="picky-input"
+                      disabled={false}
+                      id="picky__button__button"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        className="picky__placeholder"
+                        data-testid="picky_placeholder"
+                      >
+                        Select
+                      </span>
+                    </button>
+                    <div
+                      aria-hidden={true}
+                      className="picky__dropdown"
+                      hidden={true}
+                      id="picky-list"
+                      style={
+                        Object {
+                          "visibility": "hidden",
+                        }
+                      }
+                    >
+                      <div
+                        className="picky__filter"
+                      >
+                        <input
+                          aria-label="filter options"
+                          className="picky__filter__input"
+                          data-testid="picky__filter__input"
+                          onChange={[Function]}
+                          placeholder="Filter..."
+                          tabIndex={0}
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="sc-AxjAm dnapkf col-sm-6 col-12"
+            >
+              <div
+                className="sc-AxiKw jtqdAU"
+              >
+                <label
+                  className="sc-AxirZ dIeLm"
+                >
+                  Pay As You Go (Price)
+                </label>
+                <div
+                  className="input-group"
+                >
+                  <div
+                    className="input-group-prepend"
+                  >
+                    <span
+                      className="input-group-text"
+                    >
+                      $
+                    </span>
+                  </div>
+                  <div
+                    className="sc-AxgMl clvHkE"
+                  >
+                    <input
+                      className="form-control"
+                      disabled={false}
+                      name="pay_as_you_go"
+                      onChange={[Function]}
+                      placeholder="Enter"
+                      type="text"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-fzoLag hjXJPg"
+          >
+            <button
+              className="sc-fznZeY kKPuTo cancel  btn btn-primary"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              CANCEL
+            </button>
+            <button
+              className="sc-fznZeY kKPuTo submit  btn btn-primary"
+              disabled={false}
+              onClick={[Function]}
+              type="submit"
+            >
+              SUBMIT
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      className="sc-fznJRM hnBZhE col-md-4 col-sm-12 col-12"
+    >
+      <img
+        className="sc-fznWqX iEEuwt"
+        id="previewProductImage"
+        src="http://placehold.it/180"
+      />
+    </div>
+  </div>,
+]
+`;

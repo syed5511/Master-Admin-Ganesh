@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Customer Details page snapshot 1`] = `
+Array [
+  <nav
+    aria-label="breadcrumb"
+    className="sc-AxhCb hWdzEm"
+  >
+    <ol
+      className="breadcrumb"
+    >
+      <li
+        className="breadcrumb-item sc-AxhUy eVQCNq"
+      >
+        <a
+          href="/customer"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Customer List
+        </a>
+      </li>
+      <li
+        aria-current="page"
+        className="breadcrumb-item sc-AxhUy eVQCNq active"
+      >
+        Customer Details
+      </li>
+    </ol>
+  </nav>,
+  <div
+    className="sc-fzpkJw hkpyAf"
+  >
+    <div
+      className="sc-fznzOf bCWQKi"
+    >
+      <div
+        className="sc-fznMnq hEGnlj"
+      >
+        Customer ID
+      </div>
+      <div
+        className="sc-fzoant beiThG"
+      >
+        syedhaq@gmail.com
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-fzomME kMknQV"
+  >
+    <div
+      className="sc-AxjAm kBCRzG"
+    >
+      <div
+        className="sc-AxirZ khpUJX"
+      >
+        <div
+          className="sc-AxiKw bcGtjJ active"
+          onClick={[Function]}
+        >
+          Customer Details
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Subscriptions
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Orders
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Loyalty Tokens
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Rating & Reviews
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Feedbacks
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Notes
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-Axmtr dEwRYn"
+    >
+      <div
+        className="sc-AxmLO hTFDWG"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Full Name
+        </div>
+        <div
+          className="sc-fzoLsD gxQFtB"
+        >
+          Syed Ikram
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO hTFDWG"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Email Address
+        </div>
+        <div
+          className="sc-fzoLsD gxQFtB"
+        >
+          syed@gmail.com
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO hTFDWG"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Phone
+        </div>
+        <div
+          className="sc-fzoLsD gxQFtB"
+        >
+          408-854-0221
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO hTFDWG"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Delivery Address
+        </div>
+        <div
+          className="sc-fzoLsD gxQFtB"
+        >
+          8878 Santa Monica, Illinois, Chicago , 60078
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO hTFDWG"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Joined Date
+        </div>
+        <div
+          className="sc-fzoLsD gxQFtB"
+        >
+          3/16/2020 8:30pm
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO hTFDWG"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Status
+        </div>
+        <div
+          className="sc-fzoLsD gxQFtB"
+        >
+          <div
+            className="sc-AxgMl cjEjyT"
+          >
+            <label
+              className="sc-AxheI fEmmGq"
+              htmlFor="customSwitches"
+            >
+              Off
+            </label>
+            <div
+              className="custom-control custom-switch"
+            >
+              <input
+                className="custom-control-input"
+                id="customSwitches"
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                className="custom-control-label"
+                htmlFor="customSwitches"
+              >
+                On
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;

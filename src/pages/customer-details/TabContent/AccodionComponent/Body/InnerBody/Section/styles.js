@@ -19,12 +19,11 @@ export const Label = styled.div`
   color: #000;
   font-size: 12px;
   line-height: 16px;
-  font-weight: bold;
+  font-family: Roboto Medium, Arial, Helvetica Neue, sans-serif;
 `;
 
 export const Value = styled.div`
-  font-weight: normal;
   color: #75716b;
   line-height: 19px;
-  font-size: 14px;
+  font-size: 13px;
 `;

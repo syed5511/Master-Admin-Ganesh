@@ -11,7 +11,7 @@ export const Container = styled.header`
 export const Row = styled(BRow)`
   margin-left: 0;
   margin-right: 0;
-  padding: 20px;
+  padding: 12px 20px;
 `;
 
 export const Col = styled(BCol)`
@@ -25,6 +25,10 @@ export const Left = styled.div`
   display: flex;
   align-items: center;
   flex: 1;
+  select {
+    height: 32px;
+    font-size: 0.9rem;
+  }
 `;
 
 export const Logo = styled.div`

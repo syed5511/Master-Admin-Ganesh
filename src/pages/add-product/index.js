@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { withRouter } from "react-router";
 
 import Form from "../../common-components/Form";
 import form from "./config/form";
+import BreadCrumbs from "../../common-components/BreadCrumbs";
 import loadImage from "./utils/loadImage";
 import { Row, Col, ImagePreview } from "./styles";
 
@@ -36,6 +36,12 @@ const AddProductPage = () => {
 
   return (
     <>
+      <BreadCrumbs
+        list={[
+          { text: "Products", active: false, href: "/products" },
+          { text: "Add Product", active: true },
+        ]}
+      />
       <Row>
         <Col xs={12} sm={12} md={8} className="form-container">
           <Form
@@ -60,4 +66,4 @@ const AddProductPage = () => {
   );
 };
 
-export default withRouter(AddProductPage);
+export default AddProductPage;

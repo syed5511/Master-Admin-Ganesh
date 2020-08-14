@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp page snapshot 1`] = `
+<div
+  className="sc-AxirZ cOqVN"
+>
+  <form
+    className="sc-AxiKw ghhVBV form-signup"
+  >
+    <div
+      className="text-center mb-4"
+    >
+      <h1
+        className="h3 mb-3"
+      >
+        Sign Up
+      </h1>
+      <p>
+        Master Admin Kitchen Portal
+      </p>
+    </div>
+    <div
+      className="sc-AxhCb llzRXL row"
+    >
+      <div
+        className="sc-AxhUy eXXSzh form-label-group col-xs-12 col-sm-6 left"
+      >
+        <input
+          className="form-control"
+          id="firstName"
+          placeholder="First Name"
+          required={true}
+          type="text"
+        />
+        <label
+          for="firstName"
+        >
+          First Name
+        </label>
+      </div>
+      <div
+        className="sc-AxhUy eXXSzh form-label-group col-xs-12 col-sm-6 right"
+      >
+        <input
+          className="form-control"
+          id="lastName"
+          placeholder="Last Name"
+          required={true}
+          type="text"
+        />
+        <label
+          for="lastName"
+        >
+          Last Name
+        </label>
+      </div>
+    </div>
+    <div
+      className="form-label-group"
+    >
+      <input
+        autofocus={true}
+        className="form-control"
+        id="inputEmail"
+        placeholder="Email address"
+        required={true}
+        type="email"
+      />
+      <label
+        for="inputEmail"
+      >
+        Email address
+      </label>
+    </div>
+    <div
+      className="form-label-group"
+    >
+      <input
+        className="form-control"
+        id="inputPassword"
+        placeholder="Password"
+        required={true}
+        type="password"
+      />
+      <label
+        for="inputPassword"
+      >
+        Password
+      </label>
+    </div>
+    <div
+      className="form-label-group"
+    >
+      <input
+        className="form-control"
+        id="confirmPassword"
+        placeholder="Confirm Password"
+        required={true}
+        type="password"
+      />
+      <label
+        for="confirmPassword"
+      >
+        Confirm Password
+      </label>
+    </div>
+    <button
+      className="sc-AxjAm jleUEH submit signup-submit btn btn-primary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      Sign Up
+    </button>
+  </form>
+</div>
+`;

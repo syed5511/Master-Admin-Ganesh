@@ -15,11 +15,11 @@ export const Detail = styled.div`
 `;
 
 export const Label = styled.div`
-  font-weight: bold;
   font-size: 12px;
   line-height: 16px;
   color: #140e06;
   padding-right: 8px;
+  font-family: Roboto Medium, Arial, Helvetica Neue, sans-serif;
 `;
 
 export const Value = styled.div`

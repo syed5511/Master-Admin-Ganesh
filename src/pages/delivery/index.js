@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { withRouter } from "react-router";
 
 import Table from "../../common-components/Table";
+import BreadCrumbs from "../../common-components/BreadCrumbs";
 import Pagination from "../../common-components/Pagination";
 import Form from "../../common-components/Form";
 import Modal from "../../common-components/Modal";
 import AddZipCodes from "./AddZipCodes";
 import cols from "./config/cols";
-import list from "./config/list";
+import list from "./config/mock.list";
 import filters from "./config/filters";
 import { TopContainer, Button } from "./styles";
 
@@ -27,6 +27,9 @@ const ProductPage = () => {
 
   return (
     <>
+      <BreadCrumbs
+        list={[{ text: "Delivery zip codes & Serving kitchens", active: true }]}
+      />
       <TopContainer>
         <Form form={filters} getValues={(v) => console.log(v)} />
         <Button
@@ -57,4 +60,4 @@ const ProductPage = () => {
   );
 };
 
-export default withRouter(ProductPage);
+export default ProductPage;

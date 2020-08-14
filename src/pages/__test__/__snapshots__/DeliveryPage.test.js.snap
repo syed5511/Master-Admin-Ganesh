@@ -1,0 +1,464 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Delivery page snapshot 1`] = `
+Array [
+  <nav
+    aria-label="breadcrumb"
+    className="sc-AxiKw domzKi"
+  >
+    <ol
+      className="breadcrumb"
+    >
+      <li
+        aria-current="page"
+        className="breadcrumb-item sc-AxhCb fxcQsP active"
+      >
+        Delivery zip codes & Serving kitchens
+      </li>
+    </ol>
+  </nav>,
+  <div
+    className="sc-fzqMAW jdLuEp"
+  >
+    <div
+      className="sc-fzoiQi jkvegY"
+    >
+      <form
+        className="sc-fzoyTs crHzLr"
+        noValidate={true}
+        onSubmit={[Function]}
+      >
+        <div
+          className="sc-fzqNqU fbPvyo row"
+        >
+          <div
+            className="sc-fzoLsD iFBWyk col-md-2 col-sm-4 col-6"
+          >
+            <div
+              className="sc-fzplWN QOzlh"
+            >
+              <div
+                className="sc-fzokOt dPfWvZ"
+              >
+                <div
+                  aria-controls="picky__button"
+                  aria-owns=""
+                  className="picky "
+                  id="picky"
+                  role="combobox"
+                  tabIndex={0}
+                >
+                  <button
+                    className="picky__input  "
+                    data-testid="picky-input"
+                    disabled={false}
+                    id="picky__button__button"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="picky__placeholder"
+                      data-testid="picky_placeholder"
+                    >
+                      State
+                    </span>
+                  </button>
+                  <div
+                    aria-hidden={true}
+                    className="picky__dropdown"
+                    hidden={true}
+                    id="picky-list"
+                    style={
+                      Object {
+                        "visibility": "hidden",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-fzoLsD iFBWyk col-md-2 col-sm-4 col-6"
+          >
+            <div
+              className="sc-fzplWN QOzlh"
+            >
+              <div
+                className="sc-fzokOt dPfWvZ"
+              >
+                <div
+                  aria-controls="picky__button"
+                  aria-owns=""
+                  className="picky "
+                  id="picky"
+                  role="combobox"
+                  tabIndex={0}
+                >
+                  <button
+                    className="picky__input  "
+                    data-testid="picky-input"
+                    disabled={false}
+                    id="picky__button__button"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="picky__placeholder"
+                      data-testid="picky_placeholder"
+                    >
+                      Kitchen
+                    </span>
+                  </button>
+                  <div
+                    aria-hidden={true}
+                    className="picky__dropdown"
+                    hidden={true}
+                    id="picky-list"
+                    style={
+                      Object {
+                        "visibility": "hidden",
+                      }
+                    }
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="sc-fzoLsD iFBWyk col-md-2 col-sm-4 col-6"
+          >
+            <div
+              className="sc-fzplWN QOzlh"
+            >
+              <div
+                className="sc-fznZeY jsiuof"
+              >
+                <input
+                  className="form-control"
+                  disabled={false}
+                  name="item_name"
+                  onChange={[Function]}
+                  placeholder="Item Name"
+                  type="text"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <button
+      className="sc-fznWqX etyacc submit sc-fzoydu gXNBfE add-zip-code btn btn-primary"
+      disabled={false}
+      onClick={[Function]}
+      type="button"
+    >
+      + Zip Code
+    </button>
+  </div>,
+  <div
+    className="table-responsive"
+  >
+    <table
+      className="sc-AxjAm bLuHfC table table-sm table-hover"
+    >
+      <thead
+        className="sc-AxirZ faxrkr"
+      >
+        <tr>
+          <th>
+            State
+          </th>
+          <th>
+            Zip Codes
+          </th>
+          <th>
+            Kitchen Name
+          </th>
+          <th>
+            Zone No
+          </th>
+          <th>
+            Delivery
+          </th>
+          <th>
+            Paid Delivery Zones
+          </th>
+          <th>
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Illinios
+          </td>
+          <td>
+            <a
+              className="sc-fzoYkl fgNaEO"
+            >
+              60078, 3342, 45454, 54545, 54545
+            </a>
+          </td>
+          <td>
+            Syed Kitchen 5511
+          </td>
+          <td>
+            101
+          </td>
+          <td>
+            free
+          </td>
+          <td>
+            <div
+              className="sc-fznMnq fhEgew"
+            >
+              <div
+                className="sc-fzoant kMxmeA"
+              >
+                <div
+                  className="sc-fzomME jJsQZI"
+                >
+                  202
+                </div>
+                 - 
+                <div
+                  className="sc-fzomME jJsQZI"
+                >
+                  $
+                   
+                  7.3
+                </div>
+              </div>
+              <div
+                className="sc-fzoant kMxmeA"
+              >
+                <div
+                  className="sc-fzomME jJsQZI"
+                >
+                  203
+                </div>
+                 - 
+                <div
+                  className="sc-fzomME jJsQZI"
+                >
+                  $
+                   
+                  6.7
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div
+              className="sc-fzqAbL iJCrkZ"
+            >
+              <button
+                className="sc-fznWqX etyacc edit editZipCode btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Edit
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Albama
+          </td>
+          <td>
+            <a
+              className="sc-fzoYkl fgNaEO"
+            >
+              60078, 3342, 45454, 54545, 54545
+            </a>
+          </td>
+          <td>
+            Syed Kitchen 5511
+          </td>
+          <td>
+            102
+          </td>
+          <td>
+            free
+          </td>
+          <td>
+            <div
+              className="sc-fznMnq fhEgew"
+            >
+              <div
+                className="sc-fzoant kMxmeA"
+              >
+                <div
+                  className="sc-fzomME jJsQZI"
+                >
+                  201
+                </div>
+                 - 
+                <div
+                  className="sc-fzomME jJsQZI"
+                >
+                  $
+                   
+                  7.3
+                </div>
+              </div>
+              <div
+                className="sc-fzoant kMxmeA"
+              >
+                <div
+                  className="sc-fzomME jJsQZI"
+                >
+                  204
+                </div>
+                 - 
+                <div
+                  className="sc-fzomME jJsQZI"
+                >
+                  $
+                   
+                  6.7
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div
+              className="sc-fzqAbL iJCrkZ"
+            >
+              <button
+                className="sc-fznWqX etyacc edit editZipCode btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                Edit
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>,
+  <ul
+    className="sc-AxhUy iwjpuy pagination"
+  >
+    <li
+      className="sc-AxheI fniENP page-item disabled"
+    >
+      <span
+        className="page-link"
+        disabled={true}
+        onClick={[Function]}
+      >
+        <span
+          aria-hidden="true"
+        >
+          «
+        </span>
+        <span
+          className="sr-only"
+        >
+          First
+        </span>
+      </span>
+    </li>
+    <li
+      className="sc-Axmtr hBVTto page-item disabled"
+    >
+      <span
+        className="page-link"
+        disabled={true}
+        onClick={[Function]}
+      >
+        <span
+          aria-hidden="true"
+        >
+          ‹
+        </span>
+        <span
+          className="sr-only"
+        >
+          Previous
+        </span>
+      </span>
+    </li>
+    <li
+      className="sc-AxgMl kDEWZS page-item active"
+    >
+      <span
+        className="page-link"
+        disabled={false}
+      >
+        1
+        <span
+          className="sr-only"
+        >
+          (current)
+        </span>
+      </span>
+    </li>
+    <li
+      className="sc-AxgMl kDEWZS page-item"
+    >
+      <a
+        className="page-link"
+        href="#"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+      >
+        2
+      </a>
+    </li>
+    <li
+      className="sc-AxmLO cAKCgh page-item"
+    >
+      <a
+        className="page-link"
+        href="#"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+      >
+        <span
+          aria-hidden="true"
+        >
+          ›
+        </span>
+        <span
+          className="sr-only"
+        >
+          Next
+        </span>
+      </a>
+    </li>
+    <li
+      className="sc-fzozJi jxgYyc page-item"
+    >
+      <a
+        className="page-link"
+        href="#"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+      >
+        <span
+          aria-hidden="true"
+        >
+          »
+        </span>
+        <span
+          className="sr-only"
+        >
+          Last
+        </span>
+      </a>
+    </li>
+  </ul>,
+]
+`;

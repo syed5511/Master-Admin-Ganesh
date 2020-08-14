@@ -7,8 +7,8 @@ import Alert from "../../../common-components/Alert";
 import { Container, TopDetails, Label, Value } from "./styles";
 
 const SetServingDays = ({ data }) => {
-  const onFormChange = (v) => {
-    console.log(v);
+  const onSubmit = (values) => {
+    console.log("submitted values", values);
   };
 
   return (
@@ -27,7 +27,7 @@ const SetServingDays = ({ data }) => {
       <Form
         form={servingDaysForm}
         formValues={{ serving_days: data.serving_days }}
-        getValues={onFormChange}
+        onSubmit={onSubmit}
       />
     </Container>
   );

@@ -10,7 +10,7 @@ export const Container = styled.footer`
 export const Row = styled(BRow)`
   margin-left: 0;
   margin-right: 0;
-  padding: 20px;
+  padding: 12px 20px;
 `;
 
 export const Col = styled(BCol)`

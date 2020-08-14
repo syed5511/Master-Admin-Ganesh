@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { withRouter } from "react-router";
 
+import BreadCrumbs from "../../common-components/BreadCrumbs";
 import Table from "../../common-components/Table";
 import Pagination from "../../common-components/Pagination";
 import Form from "../../common-components/Form";
 import Modal from "../../common-components/Modal";
 import cols from "./config/cols";
-import list from "./config/list";
+import list from "./config/mock.list";
 import history from "../../history";
 import filters from "./config/filters";
 import SetServingDays from "./SetServingDays";
@@ -28,6 +28,7 @@ const ProductPage = () => {
 
   return (
     <>
+      <BreadCrumbs list={[{ text: "Products", active: true }]} />
       <TopContainer>
         <Form form={filters} getValues={(v) => console.log(v)} />
         <Button
@@ -60,4 +61,4 @@ const ProductPage = () => {
   );
 };
 
-export default withRouter(ProductPage);
+export default ProductPage;

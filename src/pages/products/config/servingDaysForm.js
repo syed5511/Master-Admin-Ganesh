@@ -1,5 +1,4 @@
 const form = {
-  getValuesOn: ["change", "submit"],
   controls: [
     {
       name: "serving_days",

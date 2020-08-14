@@ -8,6 +8,6 @@ export const Body = styled.main`
 export const Row = styled(BRow)`
   margin-left: 0;
   margin-right: 0;
-  min-height: calc(100vh - 141px);
+  min-height: calc(100vh - 106px);
   overflow: hidden;
 `;

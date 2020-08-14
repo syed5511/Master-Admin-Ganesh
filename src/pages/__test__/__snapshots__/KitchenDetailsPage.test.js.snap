@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Kitchen Details page snapshot 1`] = `
+Array [
+  <nav
+    aria-label="breadcrumb"
+    className="sc-AxhCb hWdzEm"
+  >
+    <ol
+      className="breadcrumb"
+    >
+      <li
+        className="breadcrumb-item sc-AxhUy eVQCNq"
+      >
+        <a
+          href="/kitchen"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Registered Kitchens
+        </a>
+      </li>
+      <li
+        aria-current="page"
+        className="breadcrumb-item sc-AxhUy eVQCNq active"
+      >
+        Kitchen Details
+      </li>
+    </ol>
+  </nav>,
+  <div
+    className="sc-Axmtr gIZhfr"
+  >
+    <div
+      className="sc-AxmLO bBxKBY"
+    >
+      <div
+        className="sc-fzozJi leWeVZ"
+      >
+        Kitchen Email
+      </div>
+      <div
+        className="sc-fzoLsD cjjyNq"
+      >
+        syedhaq@gmail.com
+      </div>
+    </div>
+    <div
+      className="sc-AxmLO bBxKBY"
+    >
+      <div
+        className="sc-fzozJi leWeVZ"
+      >
+        Kitchen Name
+      </div>
+      <div
+        className="sc-fzoLsD cjjyNq"
+      >
+        Syed Kitchen
+      </div>
+    </div>
+  </div>,
+  <div
+    className="sc-fzpans dMsQb"
+  >
+    <div
+      className="sc-AxjAm kBCRzG"
+    >
+      <div
+        className="sc-AxirZ khpUJX"
+      >
+        <div
+          className="sc-AxiKw bcGtjJ active"
+          onClick={[Function]}
+        >
+          Kitchen Details
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Orders
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Feedback
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Invoice
+        </div>
+        <div
+          className="sc-AxiKw bcGtjJ"
+          onClick={[Function]}
+        >
+          Notes
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-fzplWN bBeZUM"
+    >
+      <div
+        className="sc-AxmLO bBxKBY column"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Full Name
+        </div>
+        <div
+          className="sc-fzoLsD cjjyNq content"
+        >
+          Syed Ikram
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO bBxKBY column"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Email Address
+        </div>
+        <div
+          className="sc-fzoLsD cjjyNq content"
+        >
+          syed@gmail.com
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO bBxKBY column"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Phone
+        </div>
+        <div
+          className="sc-fzoLsD cjjyNq content"
+        >
+          408-854-0221
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO bBxKBY column"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Business Address
+        </div>
+        <div
+          className="sc-fzoLsD cjjyNq content"
+        >
+          8878 Santa Monica, Illinois, Chicago , 60078
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO bBxKBY column"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Joined Date
+        </div>
+        <div
+          className="sc-fzoLsD cjjyNq content"
+        >
+          3/16/2020 8:30pm
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO bBxKBY column"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Kitchen Name
+        </div>
+        <div
+          className="sc-fzoLsD cjjyNq content"
+        >
+          Syed Kitchen
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO bBxKBY column"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Zone No
+        </div>
+        <div
+          className="sc-fzoLsD cjjyNq content"
+        >
+          101
+        </div>
+      </div>
+      <div
+        className="sc-AxmLO bBxKBY column"
+      >
+        <div
+          className="sc-fzozJi leWeVZ"
+        >
+          Status
+        </div>
+        <div
+          className="sc-fzoLsD cjjyNq content"
+        >
+          <div
+            className="sc-AxgMl cjEjyT"
+          >
+            <label
+              className="sc-AxheI fEmmGq"
+              htmlFor="customSwitches"
+            >
+              Off
+            </label>
+            <div
+              className="custom-control custom-switch"
+            >
+              <input
+                className="custom-control-input"
+                id="customSwitches"
+                readOnly={true}
+                type="checkbox"
+              />
+              <label
+                className="custom-control-label"
+                htmlFor="customSwitches"
+              >
+                On
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
